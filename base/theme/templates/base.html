@@ -1,0 +1,27 @@
+{% load static tailwind_tags %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    <title>Django Tailwind</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<script src="//unpkg.com/alpinejs" defer></script>
+
+		{% tailwind_css %}
+	</head>
+		{% block navbar %}
+	    	{% include 'navbar2.html' %}
+		{% endblock %}
+
+	<body class="bg-gray-50 font-serif leading-normal tracking-normal">
+		{% block content %}
+    		<h2>Bienvenue sur la page d'accueil</h2>
+			<p>Ceci est le contenu spécifique à la page d'accueil.</p>
+		{% endblock %}
+	</body>
+
+		{% block footer %}
+	    	{% include 'footer.html' %}
+		{% endblock %}
+</html>
