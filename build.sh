@@ -16,3 +16,5 @@ python manage.py collectstatic --no-input
 # Appliquer les migrations
 python manage.py migrate
 
+cd ..
+
