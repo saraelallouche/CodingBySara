@@ -19,7 +19,7 @@ services:
       - key: DJANGO_DEBUG
         value: "False"
       - key: DATABASE_URL
-        value: postgres://user:password@localhost:5432/mydatabase
+        value: postgresql://saraelallouche:oM88UfCypqb1fKcYhyTfdrkFqYClNkdG@dpg-cvi8jhl6ubrc73fvou70-a/saraweb_database
       - key: NPM_BIN_PATH
         value: "/opt/homebrew/bin/npm"
       - key: SECURE_SSL_REDIRECT
