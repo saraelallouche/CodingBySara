@@ -2,6 +2,8 @@
 # Arrêter en cas d'erreur
 set -o errexit
 
+cd base
+
 # Installer les dépendances Python
 pip install -r requirements.txt
 
