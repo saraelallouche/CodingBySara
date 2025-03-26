@@ -1,10 +1,16 @@
 #!/usr/bin/env bash
-# Exit on error
+# Arrêter en cas d'erreur
 set -o errexit
 
-# Modify this line as needed for your package manager (pip, poetry, etc.)
+# Installer les dépendances Python
 pip install -r requirements.txt
 
-# Convert static asset files
+# Construire Tailwind (si nécessaire)
+python manage.py tailwind build || echo "Tailwind build failed, continuing..."
+
+# Collecter les fichiers statiques
 python manage.py collectstatic --no-input
+
+# Appliquer les migrations
+python manage.py migrate
 
