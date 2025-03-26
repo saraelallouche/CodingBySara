@@ -1,7 +1,7 @@
 databases:
   - name: saraWeb
     plan: free
-    databaseName: saraWeb_db
+    databaseName: saraWebDataBase
     user: saraelallouche
 
 services:
