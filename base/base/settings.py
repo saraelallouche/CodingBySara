@@ -29,6 +29,11 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'fallback-secret-key')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DJANGO_DEBUG', 'False') == 'True'
 
+SECURE_SSL_REDIRECT = True  # Redirige tout le trafic HTTP vers HTTPS
+if DEBUG:
+    SECURE_SSL_REDIRECT = False
+
+
 ALLOWED_HOSTS = os.getenv('DJANGO_ALLOWED_HOSTS', 'localhost').split(',')
 
 
@@ -144,3 +149,7 @@ TAILWIND_APP_NAME = 'theme'
 INTERNAL_IPS = [
     "127.0.0.1",
 ]
+
+CSRF_COOKIE_SECURE = True  # Empêche l'envoi des cookies CSRF sur HTTP
+SESSION_COOKIE_SECURE = True  # Empêche l'envoi des cookies de session sur HTTP
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
