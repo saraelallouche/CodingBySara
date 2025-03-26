@@ -10,7 +10,7 @@ services:
     name: saraWeb
     runtime: python
     buildCommand: "./build.sh"
-    startCommand: "cd base && gunicorn base.wsgi:application"
+    startCommand: "cd base && python -m gunicorn base.asgi:application -k uvicorn.workers.UvicornWorker"
     envVars:
       - key: DJANGO_ALLOWED_HOSTS
         value: "*"
