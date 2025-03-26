@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'fallback-secret-key')
+SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'django-insecure-m(ywbpqt-6nesl4(@btb)fx$md^!ll58b7*-(6*vbuia#sdo$e')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DJANGO_DEBUG', 'False') == 'True'
@@ -153,3 +153,4 @@ INTERNAL_IPS = [
 CSRF_COOKIE_SECURE = True  # Empêche l'envoi des cookies CSRF sur HTTP
 SESSION_COOKIE_SECURE = True  # Empêche l'envoi des cookies de session sur HTTP
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+CSRF_TRUSTED_ORIGINS = [f"https://{host}" for host in ALLOWED_HOSTS]
