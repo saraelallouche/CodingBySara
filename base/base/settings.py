@@ -12,29 +12,30 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
-from dotenv import load_dotenv
+import environ
 
-load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
+env = environ.Env()
+# Take environment variables from .env file
+environ.Env.read_env(os.path.join(BASE_DIR, ".env"))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'django-insecure-m(ywbpqt-6nesl4(@btb)fx$md^!ll58b7*-(6*vbuia#sdo$e')
+SECRET_KEY = env('DJANGO_SECRET_KEY', default='django-insecure-m(ywbpqt-6nesl4(@btb)fx$md^!ll58b7*-(6*vbuia#sdo$e')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv('DJANGO_DEBUG', 'False') == 'True'
+DEBUG = env.bool('DJANGO_DEBUG', default=False)
 
 SECURE_SSL_REDIRECT = True  # Redirige tout le trafic HTTP vers HTTPS
 if DEBUG:
     SECURE_SSL_REDIRECT = False
 
 
-ALLOWED_HOSTS = os.getenv('DJANGO_ALLOWED_HOSTS', 'localhost').split(',')
+ALLOWED_HOSTS = env('DJANGO_ALLOWED_HOSTS', default='localhost').split(',')
 
 
 # Application definition
@@ -135,7 +136,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [
-    BASE_DIR / "static",
+    os.path.join(BASE_DIR, "static"),
+    os.path.join(BASE_DIR, "theme", "static"),
 ]
 
 # Default primary key field type
@@ -149,8 +151,18 @@ TAILWIND_APP_NAME = 'theme'
 INTERNAL_IPS = [
     "127.0.0.1",
 ]
-
+CSRF_COOKIE_HTTPONLY = True
 CSRF_COOKIE_SECURE = True  # Empêche l'envoi des cookies CSRF sur HTTP
 SESSION_COOKIE_SECURE = True  # Empêche l'envoi des cookies de session sur HTTP
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-CSRF_TRUSTED_ORIGINS = [f"https://{host}" for host in ALLOWED_HOSTS]
+CORS_ALLOWED_ORIGINS = (
+    "http://localhost:3000",
+    "http://localhost:8000",
+    "http://saraweb-epkj.onrender.com",
+    "https://saraweb-epkj.onrender.com",
+)
+CSRF_TRUSTED_ORIGINS = [
+    "http://localhost:3000",
+    "http://saraweb-epkj.onrender.com",
+    "https://saraweb-epkj.onrender.com",
+]
