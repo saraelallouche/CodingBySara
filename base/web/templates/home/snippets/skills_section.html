@@ -1,55 +1,9 @@
-{% extends 'base.html' %}
 {% load static %}
-
-		{% block content %}
-<div class="bg-primary-950"> 
-
-<div class="relative isolate overflow-hidden">
-    <img src="{% static 'images/background_cta.png' %}" alt="" class="absolute inset-y-0 right-0 -z-10 h-full object-cover">
-    <div class="mx-auto max-w-7xl px-6 lg:px-8">
-      <div class=" max-w-2xl lg:py-28">
-        <div class="hidden sm:mb-8 sm:flex sm:justify-center">
-          <div class="relative rounded-full px-3 py-1 text-xl text-primary-300 ring-1 ring-secondary/10 tracking-widest
-          ">
-            FULL-SATCK DEVELOPER
-          </div>
-        </div>
-        <div class="text-left">
-          <h1 class="text-balance text-5xl font-semibold tracking-wider text-secondary sm:text-7xl ">Sara <br> El Allouche</h1>
-          <p class="mt-8 text-pretty text-lg/4 text-primary-300 sm:text-xl/8">
-            Hi ! I’m a full-stack developer specializing in Django. Recently graduated with a Master’s degree in MIAGE from La Sorbonne, I’m passionate about web development and always eager for new challenges. Currently looking for my first job, I’m ready to bring my skills to a dynamic team!
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-
-  <div class=" py-24 sm:py-32">
-    <div class="relative isolate">
-      <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
-        <div class="mx-auto flex max-w-2xl flex-col gap-16 bg-white/5 px-6 py-16 ring-1 ring-white/10 sm:rounded-3xl sm:p-8 lg:mx-0 lg:max-w-none lg:flex-row lg:items-center lg:py-20 xl:gap-x-20 xl:px-20">
-          <img class="h-96 w-full flex-none rounded-2xl object-cover shadow-xl lg:aspect-square lg:h-auto lg:max-w-sm" src="{% static 'images/image.png' %}" alt="">
-          <div class="w-full flex-auto">
-            <h2 class="text-pretty text-4xl font-semibold tracking-tight text-white sm:text-5xl">About me</h2>
-            <p class="mt-6 text-pretty text-lg/8 text-gray-300">
-              During my two years in a work-study program in a start-up specializing in web and mobile development, I gained valuable experience working on various projects, ranging from initial design to putting online, not forgetting maintenance. continues. This immersion allowed me to understand the challenges of each stage of the development process and to collaborate closely with different teams. I was thus able to strengthen my technical skills while refining my project management skills. In particular, I have developed solid expertise in Django, whether for the creation of dynamic websites or for the implementation of robust APIs. Working on site design is one of my strong points, and I take real pleasure in combining aesthetics and performance to offer exceptional user experiences.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="absolute inset-x-0 -top-16 -z-10 flex transform-gpu justify-center overflow-hidden blur-3xl" aria-hidden="true">
-        <div class="aspect-[1318/752] w-[82.375rem] flex-none bg-gradient-to-r from-[#80caff] to-[#4f46e5] opacity-25" style="clip-path: polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="w-full mx-auto p-6 ">
+<div class="w-full mx-auto p-6 ">
     <h2 class=" pb-10 text-pretty text-4xl font-semibold tracking-tight text-white sm:text-5xl  text-center">My skills </h2>
 
     <!-- Première ligne -->
-    <div class="max-w-5xl mx-auto flex justify-between py-4">
+    <div class="max-w-5xl mx-auto md:flex justify-between py-4">
         <!-- Skill 1 -->
         <div class="  w-1/2 px-10" x-data="{ open_django: false }">
           <div class=" flex justify-between">
@@ -128,10 +82,10 @@
           </div>
       </div>
     <!-- Ligne de séparation -->
-    <hr class="border-gray-300 my-4">
+    <hr class="border-gray-300 my-4  hidden md:block">
 
     <!-- Deuxième ligne -->
-    <div class="max-w-5xl mx-auto flex justify-between py-4">
+    <div class="max-w-5xl mx-auto md:flex justify-between py-4">
       <!-- Skill 3 -->
       <div class="  w-1/2 px-10" x-data="{ open_css: false }">
         <div class=" flex justify-between">
@@ -208,10 +162,10 @@
     </div>
 
     <!-- Ligne de séparation -->
-    <hr class="border-gray-300 my-4">
+    <hr class="border-gray-300 my-4  hidden md:block">
 
     <!-- Troisième ligne -->
-    <div class="max-w-5xl mx-auto flex justify-between py-4">
+    <div class="max-w-5xl mx-auto md:flex justify-between py-4">
       <!-- Skill 5 -->
       <div class="  w-1/2 px-10" x-data="{ open_mobile: false }">
         <div class=" flex justify-between">
@@ -289,10 +243,10 @@
     </div>
 
 <!-- Ligne de séparation -->
-<hr class="border-gray-300 my-4">
+<hr class="border-gray-300 my-4 hidden md:block">
 
     <!-- Quatrième ligne -->
-    <div class="max-w-5xl mx-auto flex justify-between py-4">
+    <div class="max-w-5xl mx-auto md:flex justify-between py-4">
       <!-- Skill 7 -->
       <div class="  w-1/2 px-10" x-data="{ open_aws: false }">
         <div class=" flex justify-between">
@@ -370,11 +324,5 @@
     </div>
 
 <!-- Ligne de séparation -->
-<hr class="border-gray-300 my-4">
+<hr class="border-gray-300 my-4  hidden md:block">
 </div>
-  
-
-</div>
-</div>
-
-		{% endblock %}

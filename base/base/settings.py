@@ -92,13 +92,22 @@ WSGI_APPLICATION = 'base.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
-     'default': dj_database_url.config(
-        # Replace this value with your local database's connection string.
-        default='postgresql://saraelallouche:oM88UfCypqb1fKcYhyTfdrkFqYClNkdG@dpg-cvi8jhl6ubrc73fvou70-a.oregon-postgres.render.com/saraweb_database',
-        conn_max_age=600
-    )
-}
+if DEBUG:
+    DATABASES = {
+        'default': dj_database_url.config(
+            # Replace this value with your local database's connection string.
+            default='postgresql://saraelallouche:oM88UfCypqb1fKcYhyTfdrkFqYClNkdG@dpg-cvi8jhl6ubrc73fvou70-a.oregon-postgres.render.com/saraweb_database',
+            conn_max_age=600
+        )
+    }
+else:
+    DATABASES = {
+        'default': dj_database_url.config(
+            # Replace this value with your local database's connection string.
+            default='postgresql://saraelallouche:oM88UfCypqb1fKcYhyTfdrkFqYClNkdG@dpg-cvi8jhl6ubrc73fvou70-a.oregon-postgres.render.com/saraweb_database',
+            conn_max_age=600
+        )
+    }
 
 
 # Password validation
