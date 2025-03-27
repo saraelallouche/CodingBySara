@@ -182,3 +182,13 @@ CSRF_TRUSTED_ORIGINS = [
     "http://saraweb-epkj.onrender.com",
     "https://saraweb-epkj.onrender.com",
 ]
+
+
+# for email contact 
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'elallouchesara@gmail.com'  #sender's email-id
+EMAIL_HOST_PASSWORD = 'wyxx vrji qigl casr' #password associated with above email-id (not the regular password)
