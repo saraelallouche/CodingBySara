@@ -1,5 +1,20 @@
-env/
-db.sqlite3
-staticfiles/
+# Environnement
+.env
+env 
+
+# macOS
+.DS_Store
+
+# Python
 __pycache__/
-*.pyc
+*.py[cod]
+*.sqlite3
+
+# Django
+/static/
+/staticfiles/
+/media/
+/db.sqlite3
+
+# VS Code
+.vscode/
