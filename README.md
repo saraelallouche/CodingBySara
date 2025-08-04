@@ -58,16 +58,25 @@ git clone https://github.com/saraelallouche/CodingBySara.git
 cd CodingBySara
 ```
 2. **Créer un environnement virtuel**
+```bash
 python -m venv venv
 source venv/bin/activate  # ou venv\Scripts\activate sous Windows
+```
 3. **Installer les dépendances**
+```bash
 pip install -r requirements.txt
 npm install
+```
 4. **Compiler le CSS avec Tailwind**
+```bash
 npm run build     # ou npm run dev pour watcher
+
+```
 5. **Lancer le serveur**
+```bash
 python manage.py migrate
 python manage.py runserver
+```
 
 ---
 
