@@ -36,7 +36,6 @@
 
 ## 📁 Arborescence
 
-.
 ├── config/ # Paramètres du projet Django  
 ├── locale/ # Fichiers de traduction  
 ├── static/ # Fichiers statiques finaux  
