@@ -1,0 +1,45 @@
+{% load static %}
+{% load i18n %}
+
+<section id="home" class="relative isolate overflow-hidden  z-10 ">
+
+    <!-- Image d’arrière-plan -->
+    <video autoplay muted loop playsinline
+        class="absolute inset-0 w-full h-full object-cover object-center z-0">
+        <source src="{% static 'video/home.mp4' %}" type="video/mp4" />
+        {% trans "Votre navigateur ne supporte pas la vidéo." %}
+        
+    </video>
+
+
+    <!-- Contenu principal (au-dessus de l'overlay) -->
+    <div class="relative  mx-auto max-w-7xl px-6 lg:px-8 mt-32">
+      <div class="mx-auto pb-28">
+        <div class="hidden sm:mb-8 sm:flex sm:justify-center mt-4">
+          <div class="relative rounded-full w-auto px-3 py-1 text-sm sm:text-xl text-light ring-2 ring-dark/50 tracking-widest">
+            {% trans "DÉVELOPPEUSE FULL-STACK " %}
+          </div>
+        </div>
+        <div class="relative  pb-5">
+          <!-- Fond semi-transparent -->
+          <div class="absolute max-w-4xl mx-auto inset-0 bg-primary opacity-50 z-10 border rounded-md"></div>
+        
+          <!-- Contenu au-dessus -->
+          <div class="relative z-50 text-center">
+            <h1 class="max-w-4xl mx-auto text-4xl font-semibold tracking-wider text-dark sm:text-7xl pt-10">
+              Sara El Allouche
+            </h1>
+            <p class="max-w-3xl mx-auto mt-8 text-pretty text-md/4 text-dark sm:text-xl/8 px-6">
+              {% blocktrans %}
+                Salut, je m'appelle Sara ! <br> Je suis développeuse full-stack passionnée par les technologies web. <br>
+                Je viens d'obtenir un Master en MIAGE à l'université de la Sorbonne. <br>
+                Je suis spécialisé dans Django et les outils front-end modernes, et je recherche actuellement un poste stimulant qui me permettra de consolider mes compétences et de relever de nouveaux défis techniques.
+              {% endblocktrans %}
+
+            </p>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+</section>
