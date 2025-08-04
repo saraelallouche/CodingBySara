@@ -37,15 +37,15 @@
 ## 📁 Arborescence
 
 .
-├── config/ # Paramètres du projet Django
-├── locale/ # Fichiers de traduction
-├── static/ # Fichiers statiques finaux
-├── static_src/ # Fichiers sources (ex: tailwind.config.js)
-├── theme/ # Partie front, CSS, JS, HTML
-├── website/ # App principale
-├── manage.py
-├── README.md
-└── requirements.txt
+├── config/ # Paramètres du projet Django  
+├── locale/ # Fichiers de traduction  
+├── static/ # Fichiers statiques finaux  
+├── static_src/ # Fichiers sources (ex: tailwind.config.js)  
+├── theme/ # Partie front, CSS, JS, HTML  
+├── website/ # App principale  
+├── manage.py  
+├── README.md  
+└── requirements.txt  
 
 
 ---
@@ -82,12 +82,12 @@ python manage.py runserver
 
 ## 🌐 Déploiement
 
-Le site peut être facilement déployé sur :
+Le site peut être facilement déployé sur :  
 
-AWS EC2 / Lightsail
-Render / Railway / Vercel (avec adaptateur Python)
-Docker
-Besoin d'aide pour le déploiement ? Voir build.sh ou me contacter.
+AWS EC2 / Lightsail  
+Render / Railway / Vercel (avec adaptateur Python)  
+Docker  
+Besoin d'aide pour le déploiement ? Voir build.sh ou me contacter.  
 
 
 ---
@@ -101,6 +101,7 @@ Projet personnel – tous droits réservés © 2025 Sara El Allouche.
 
 ## 👋 À propos de moi
 
-Je suis Sara, développeuse fullstack passionnée par le code propre, l'expérience utilisateur et l'efficacité. Ce site est à la fois ma vitrine et mon terrain d’expérimentation.
+Je suis Sara, développeuse fullstack passionnée par le code propre, l'expérience utilisateur et l'efficacité.  
+Ce site est à la fois ma vitrine et mon terrain d’expérimentation.
 
 ➡️ Me contacter
