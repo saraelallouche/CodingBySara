@@ -95,20 +95,27 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+import dj_database_url
+
 if DEBUG:
     DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": "db.sqlite3",
+        "default": {
+            "ENGINE": "django.db.backends.sqlite3",
+            "NAME": BASE_DIR / "db.sqlite3",
+        }
     }
-}
 else:
     DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": "db.sqlite3",
+        "default": {
+            "ENGINE": "django.db.backends.postgresql",
+            "NAME": env("RDS_DB_NAME"),
+            "USER": env("RDS_USERNAME"),
+            "PASSWORD": env("RDS_PASSWORD"),
+            "HOST": env("RDS_HOSTNAME"),
+            "PORT": env("RDS_PORT", default="5432"),
+        }
     }
-}
+
 
 
 # Password validation
