@@ -30,9 +30,7 @@ SECRET_KEY = env('DJANGO_SECRET_KEY', default='django-insecure-m(ywbpqt-6nesl4(@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env.bool('DJANGO_DEBUG', default=False)
 
-SECURE_SSL_REDIRECT = True  # Redirige tout le trafic HTTP vers HTTPS
-if DEBUG:
-    SECURE_SSL_REDIRECT = False
+SECURE_SSL_REDIRECT = env.bool('SECURE_SSL_REDIRECT', default=True)  # Redirige tout le trafic HTTP vers HTTPS
 
 
 ALLOWED_HOSTS = env.list("DJANGO_ALLOWED_HOSTS")
