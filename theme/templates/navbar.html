@@ -31,7 +31,9 @@
               </button>
             </div>
             <div class="flex shrink-0 items-center">
-              <img class="h-12 w-auto rounded-full" src="{% static 'images/saraWeb.png' %}" alt="Your Company">
+              <a href="{% url 'home' %}">
+                <img class="h-12 w-auto rounded-full" src="{% static 'images/logo/codebysara.png' %}" alt="Your Company">
+              </a>
             </div>
           </div>
 
@@ -40,7 +42,6 @@
           </div>
         
         <div class="hidden md:ml-6 md:flex md:items-center md:space-x-4">
-            <a href="{% url 'home' %}" class="rounded-full px-3 py-2 text-sm font-medium text-secondary_accent hover:text-dark hover:bg-primary/50" >{% trans "Accueil" %}</a>
             <a href="{% url 'about' %}" class="rounded-full px-3 py-2 text-sm font-medium text-secondary_accent hover:text-dark hover:bg-primary/50">{% trans "À propos" %}</a>
             <a href="{% url 'skills' %}" class="rounded-full px-3 py-2 text-sm font-medium text-secondary_accent hover:text-dark hover:bg-primary/50">{% trans "Mes compétences" %}</a>
             <a href="{% url 'contact' %}" class="rounded-full px-3 py-2 text-sm font-medium text-secondary_accent hover:text-dark hover:bg-primary/50">{% trans "Contact" %}</a>
@@ -56,12 +57,6 @@
     <div class="md:hidden" id="mobile-menu" x-show="open_navbar">
       <div class=" z-10 mt-1 text-sm bg-primary  rounded-b-[32px]">
         <!-- Current: "bg-primary-900 text-secondary", Default: "text-primary-300 hover:bg-primary-700 hover:text-secondary" -->
-        <a href="{% url 'home' %}" class="block flex items-center gap-2 px-8 py-2 text-base font-medium text-secondary hover:bg-primary_accent hover:text-dark">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
-            <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
-          </svg>          
-          {% trans "Accueil" %}
-        </a>
         <a href="{% url 'about' %}" class="block flex items-center gap-2 px-8 py-2 text-base font-medium text-secondary hover:bg-primary_accent hover:text-dark">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
             <path stroke-linecap="round" stroke-linejoin="round" d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" />
