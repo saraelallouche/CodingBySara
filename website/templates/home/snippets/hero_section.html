@@ -13,7 +13,8 @@ x-data="{
       }
   }
 }"
-x-init="tryPlayVideo()">
+x-init="tryPlayVideo()"
+class="relative w-full h-full">
 
     <!-- Vidéo de fond -->
     <video x-show="!showFallback"
@@ -25,10 +26,12 @@ x-init="tryPlayVideo()">
     </video>
 
     <!-- Image de fallback si autoplay échoue -->
-    <div x-show="showFallback" class="absolute inset-0 w-full h-full z-0">
-        <img src="{% static 'images/video-fallback.jpg' %}" alt="Background"
+    <div x-show="showFallback" class="absolute inset-0 w-full h-full object-cover object-center z-0">
+        <img src="{% static 'images/fond.jpg' %}" alt="Background"
              class="w-full h-full object-cover" />
     </div>
+
+
 
 
     <!-- Contenu principal (au-dessus de l'overlay) -->
