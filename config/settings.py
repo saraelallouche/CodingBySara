@@ -178,22 +178,24 @@ TAILWIND_APP_NAME = 'theme'
 INTERNAL_IPS = [
     "127.0.0.1",
 ]
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_HTTPONLY = True
-CSRF_COOKIE_SECURE = True  # Empêche l'envoi des cookies CSRF sur HTTP
-SESSION_COOKIE_SECURE = True  # Empêche l'envoi des cookies de session sur HTTP
+
 if DEBUG:
     CSRF_COOKIE_SECURE = False
     SESSION_COOKIE_SECURE = False
 
-
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-CORS_ALLOWED_ORIGINS = (
-    "http://localhost:3000",
-    "http://localhost:8000",
-)
+
 CSRF_TRUSTED_ORIGINS = [
-    "http://localhost:3000",
+    "https://www.codebysara.fr",
 ]
+
+CORS_ALLOWED_ORIGINS = [
+    "https://www.codebysara.fr",
+]
+
 
 
 # for email contact 
