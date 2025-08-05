@@ -4,11 +4,10 @@
 <section id="home" class="relative isolate overflow-hidden  z-10 ">
 
     <!-- Image d’arrière-plan -->
-    <video autoplay muted loop playsinline
-        class="absolute inset-0 w-full h-full object-cover object-center z-0">
+    <video autoplay muted loop playsinline webkit-playsinline preload="auto"
+    class="absolute inset-0 w-full h-full object-cover object-center z-0">
         <source src="{% static 'video/home.mp4' %}" type="video/mp4" />
-        {% trans "Votre navigateur ne supporte pas la vidéo." %}
-        
+        {% trans "Votre navigateur ne supporte pas la vidéo." %}      
     </video>
 
 
