@@ -52,7 +52,7 @@ INSTALLED_APPS = [
     'django_browser_reload', # for tailwind
     'locale',
     'storages', #for s3 buckets
-    'ebhealthcheck.apps.EBHealthCheckConfig', # for health stay ok
+    'elb_health_check', # for health stay ok
 
 ]
 
