@@ -66,9 +66,12 @@ MIDDLEWARE = [
     "django_browser_reload.middleware.BrowserReloadMiddleware",
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.locale.LocaleMiddleware', #for Internationalization
+    "config.middleware.DisableAllowedHostsForELB",  # for health stay ok 
 
 
 ]
+
+
 
 ROOT_URLCONF = 'config.urls'
 
