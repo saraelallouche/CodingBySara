@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'django_browser_reload', # for tailwind
     'locale',
     'storages', #for s3 buckets
+    'ebhealthcheck.apps.EBHealthCheckConfig', # for health stay ok
 
 ]
 
@@ -66,9 +67,6 @@ MIDDLEWARE = [
     "django_browser_reload.middleware.BrowserReloadMiddleware",
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.locale.LocaleMiddleware', #for Internationalization
-    "config.middleware.DisableAllowedHostsForELB",  # for health stay ok 
-
-
 ]
 
 
