@@ -65,7 +65,6 @@ def send_mail_page(request):
                 messages.success(request, "Votre message a bien été envoyé.")
             except Exception as e:
                 messages.error(request, f"Une erreur est survenue lors de l'envoie de l'email. ")
-        messages.error(request, f"Une erreur est survenue lors de l'envoie de l'email. ")
     else:
         form = ContactForm()
 
