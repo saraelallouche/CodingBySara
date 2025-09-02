@@ -1,0 +1,100 @@
+{% load static %}
+{% load i18n %}
+
+<section id="portfolio" class="w-full bg-dark py-32">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col gap-16">
+      <div class="flex items-center gap-x-8 justify-center">
+
+      <!-- Titre Section -->
+      <h2 x-data
+          x-intersect.once="$el.classList.add('opacity-100','translate-x-0'); $el.classList.remove('opacity-0','-translate-x-10')"
+          class="opacity-0 -translate-x-10 transition-all duration-[1500ms] text-pretty text-3xl font-semibold tracking-tight text-light sm:text-5xl text-center">
+          {% trans "Mon Portfolio" %}
+      </h2>
+      <a href="{% url 'portfolio' %}">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-10 text-light">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+        </svg>
+      </a>
+      </div>
+  
+      <!-- Projet YCSOS -->
+      <div class="flex flex-col lg:flex-row items-center lg:items-start gap-8">
+  
+        <!-- Texte à gauche -->
+        <div x-data
+             x-intersect.once="$el.classList.add('opacity-100','translate-x-0'); $el.classList.remove('opacity-0','-translate-x-20')"
+             class="opacity-0 -translate-x-20 transition-all duration-[1500ms] flex-1 flex flex-col gap-4">
+  
+          <!-- Nom entreprise -->
+          <h3 class="text-2xl font-bold text-light">YCSOS</h3>
+  
+          <!-- Description -->
+          <p class="text-light/80 text-sm">
+            {% blocktrans %}Maintenance évolutive du site interne de l'entreprise <strong>YCSOS</strong>. Le site permet de saisir des informations spécifiques lors d'interventions chez des particuliers pour effectuer des inspections et contrôles CEE.  
+            Les informations saisies génèrent automatiquement des documents Word résumant les données et le site facilite le suivi des rendez-vous des inspecteurs ainsi que de nombreuses tâches internes.{% endblocktrans %}
+          </p>
+  
+          <!-- Techno -->
+          <div class="flex flex-wrap gap-2 mt-2">
+            <span class="bg-primary/50 text-light px-3 py-1 rounded-full text-xs font-semibold">Django</span>
+            <span class="bg-secondary/50 text-light px-3 py-1 rounded-full text-xs font-semibold">Tailwind CSS</span>
+            <span class="bg-tertiary/50 text-light px-3 py-1 rounded-full text-xs font-semibold">HTML</span>
+            <span class="bg-primary/50 text-light px-3 py-1 rounded-full text-xs font-semibold">Sentry</span>
+            <span class="bg-secondary/50 text-light px-3 py-1 rounded-full text-xs font-semibold">AWS</span>
+          </div>
+        </div>
+  
+        <!-- Image à droite -->
+        <div x-data
+             x-intersect.once="$el.classList.add('opacity-100','translate-x-0'); $el.classList.remove('opacity-0','translate-x-20')"
+             class="opacity-0 translate-x-20 transition-all duration-[1500ms] flex-1">
+          <a href="#" target="_blank" class="block w-full overflow-hidden rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+            <img src="{% static 'images/portfolio/ycsos.png' %}" alt="YCSOS Project Preview" class="w-full h-auto object-cover">
+          </a>
+        </div>
+  
+      </div>
+  
+<!-- Projet GuidelingOU -->
+<div class="flex flex-col lg:flex-row items-center lg:items-start gap-8 mt-16">
+
+    <!-- Texte à gauche -->
+    <div x-data
+         x-intersect.once="$el.classList.add('opacity-100','translate-x-0'); $el.classList.remove('opacity-0','-translate-x-20')"
+         class="opacity-0 -translate-x-20 transition-all duration-[1500ms] flex-1 flex flex-col gap-4">
+  
+      <!-- Nom entreprise / projet -->
+      <h3 class="text-2xl font-bold text-light">GuidelingOU</h3>
+  
+      <!-- Description -->
+      <p class="text-light/80 text-sm">
+        {% blocktrans %}Refactorisation de plusieurs applications du groupe <strong>GuidelingOU</strong>.  
+        Chaque application représente un lieu ou un musée (Louvre, Montmartre, Rijksmuseum…) et permet d’acheter des visites guidées en suivant des images et un texte détaillant chaque œuvre ou point intéressant sur le chemin.  
+        J’ai pu refaire entièrement ces applications, qui possèdent un code commun et font des appels API différents selon les lieux, puis les déployer sur les différentes plateformes.{% endblocktrans %}
+      </p>
+  
+      <!-- Techno -->
+      <div class="flex flex-wrap gap-2 mt-2">
+        <span class="bg-tertiary/50 text-light px-3 py-1 rounded-full text-xs font-semibold">FlutterFlow</span>
+        <span class="bg-primary/50 text-light px-3 py-1 rounded-full text-xs font-semibold">Flutter</span>
+        <span class="bg-secondary/50 text-light px-3 py-1 rounded-full text-xs font-semibold">Django API</span>
+        <span class="bg-tertiary/50 text-light px-3 py-1 rounded-full text-xs font-semibold">App Store</span>
+        <span class="bg-primary/50 text-light px-3 py-1 rounded-full text-xs font-semibold">Google Play</span>
+      </div>
+    </div>
+  
+    <!-- Image à droite -->
+    <div x-data
+         x-intersect.once="$el.classList.add('opacity-100','translate-x-0'); $el.classList.remove('opacity-0','translate-x-20')"
+         class="opacity-0 translate-x-20 transition-all duration-[1500ms] flex-1">
+      <a href="#" target="_blank" class="block w-full overflow-hidden rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+        <img src="{% static 'images/portfolio/guidelingou.png' %}" alt="GuidelingOU Project Preview" class="w-full h-auto object-cover">
+      </a>
+    </div>
+  
+  </div>
+    
+    </div>
+  </section>
+  

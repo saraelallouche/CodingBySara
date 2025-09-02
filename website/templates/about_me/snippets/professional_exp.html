@@ -1,87 +1,141 @@
 {% load static %}
 {% load i18n %}
-<section class="py-20 bg-white" id="experience">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8">
-      <!-- Title -->
-      <div class="mb-12 text-center">
-        <h2 class="text-3xl font-bold tracking-tight text-primary sm:text-4xl">
-            {% trans "Mon expérience professionnelle" %}
-        </h2>
-        <p class="mt-4 text-lg text-secondary_accent max-w-2xl mx-auto">
-            {% trans "Une aventure enrichissante dans le monde du développement web et mobile." %}
-        </p>
-      </div>
-  
-      <!-- Image + text -->
-      <div class="flex flex-col lg:flex-row gap-12 items-center">
-        <!-- Image -->
-        <div class="max-w-md lg:w-[400px] flex-shrink-0">
-          <img
-            src="{% static 'images/remote.jpg' %}"
-            alt="Remote work"
-            class="rounded-3xl shadow-xl object-cover w-full h-full"
-          >
-        </div>
-  
-        <!-- Content -->
-        <div class="flex-1 text-base leading-7 text-secondary_accent space-y-6">
-          <p>
-            {% trans "J’ai eu la chance d’effectuer un <strong>stage de fin de licence</strong>, ainsi que mes <strong>deux années de master en alternance</strong> au sein de la start-up <strong>TourData</strong>, spécialisée dans le développement web et mobile. Toute cette expérience s’est déroulée en <strong>full remote</strong>, avec quelques déplacements ponctuels dans l’année, puisque l’entreprise est basée à Orléans." %}
-          </p>
-          <p>
-            {% trans "J’ai intégré l’équipe avec un bagage technique en <strong>HTML/CSS</strong> et <strong>Python</strong>. Mon tuteur m’a formée à <strong>Tailwind CSS</strong> et m’a confié la refonte d’un site vitrine, en améliorant à la fois son <strong>design</strong>, sa <strong>responsivité</strong> et son <strong>accessibilité</strong>." %}
-          </p>
-          <p>
-            {% trans "En autodidacte, je me suis formée à <strong>Django</strong> grâce aux ouvrages <em>Django for Beginners</em> et <em>Django for APIs</em>. J’ai pu rapidement contribuer à la maintenance et à l’évolution de projets existants, puis en assumer la <strong>conduite complète</strong> : du recueil des besoins à la mise en production." %}
-          </p>
-          <p>
-            {% trans "Cette expérience a été particulièrement <strong>formatrice</strong> et m’a permis de développer un <strong>profil polyvalent</strong>, avec un fort esprit d’initiative." %}
-          </p>
-  
-          <!-- Liste à puces -->
-          <ul class="space-y-3">
-            <li class="flex items-start gap-3">
-              <svg class="w-5 h-5 text-primary mt-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-              {% trans "Poser les bonnes questions pour formaliser les besoins" %}
-            </li>
-            <li class="flex items-start gap-3">
-              <svg class="w-5 h-5 text-primary mt-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-              {% trans "Concevoir un site complet, du portail de connexion aux templates" %}
-            </li>
-            <li class="flex items-start gap-3">
-              <svg class="w-5 h-5 text-primary mt-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-              {% trans "Intégrer des API tierces (paiement, cartographie, etc.)" %}
-            </li>
-            <li class="flex items-start gap-3">
-              <svg class="w-5 h-5 text-primary mt-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-              {% trans "Déployer sur le web, App Store et Google Play" %}
-            </li>
-            <li class="flex items-start gap-3">
-              <svg class="w-5 h-5 text-primary mt-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-              {% trans "Développer des APIs et des applications mobiles" %}
-            </li>
-            <li class="flex items-start gap-3">
-              <svg class="w-5 h-5 text-primary mt-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-              {% trans "Gérer les tâches via Notion, rédiger des tests et documenter" %}
-            </li>
-          </ul>
-  
-          <p>
-            {% trans "Ce parcours m’a permis de <strong>maîtriser chaque étape</strong> du cycle de développement, de collaborer à distance avec efficacité, et de devenir une développeuse <strong>autonome</strong> et <strong>engagée</strong>." %}
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+
+<div class="py-20  ">
+ <!-- Title -->
+ <div class="mb-16 text-center">
+  <h2 class="text-3xl font-bold tracking-tight text-light sm:text-4xl">
+    {% trans "Mon expérience professionnelle" %}
+  </h2>
+  <p class="mt-4 text-lg text-light max-w-2xl mx-auto">
+    {% trans "Une aventure enrichissante dans le monde du développement web et mobile." %}
+  </p>
+</div>
+
+
+ <!-- Timeline -->
+ <div class="relative border-l border-primary/50 space-y-12">
+      
+  <!-- Étape 1 -->
+<!-- Étape 1 -->
+<div x-data 
+     x-intersect.once="$el.classList.add('opacity-100','translate-x-0'); $el.classList.remove('opacity-0','-translate-x-10')"
+     class="ml-6 opacity-0 -translate-x-10 transition-all duration-700">
+
+  <!-- Année -->
+  <time class="text-sm font-semibold text-secondary block mb-2">
+    {% trans "Mai – Juil. 2022" %}
+  </time>
+
+  <!-- Poste -->
+  <div class="flex items-center justify-between gap-4">
+    <h3 class="text-lg font-bold text-tertiary">
+      {% trans "Développeuse front-end - Stage de fin de licence chez Tourdata" %}
+    </h3>
+  </div>
+
+  <!-- Description -->
+  <p class="text-light mt-3">
+    {% blocktrans %}
+    J’ai intégré TourData pour mon <strong>stage de fin de licence</strong>, dans un contexte de <strong>full remote</strong>. 
+    Ce premier contact avec le monde professionnel m’a permis de renforcer mes compétences en développement front-end tout en découvrant les bonnes pratiques de travail collaboratif en start-up.
+    {% endblocktrans %}
+  </p>
+
+  <!-- Liste à puces -->
+  <ul class="space-y-2 mt-3 text-light">
+    <li class="flex items-start gap-3">
+      <img src="{% static 'svg/check.svg' %}" class="w-5 h-5 mt-1" >
+      {% trans "Refonte front-end d’un site vitrine avec Tailwind CSS" %}
+    </li>
+    <li class="flex items-start gap-3">
+      <img src="{% static 'svg/check.svg' %}" class="w-5 h-5 mt-1" >
+      {% trans "Amélioration de l’accessibilité et de la responsivité" %}
+    </li>
+    <li class="flex items-start gap-3">
+      <img src="{% static 'svg/check.svg' %}" class="w-5 h-5 mt-1" >
+      {% trans "Maintenance et évolution de projets existants" %}
+    </li>
+  </ul>
+
+  <!-- Conclusion -->
+  <p class="text-light mt-3">
+    {% blocktrans %}
+    Cette première immersion m’a permis d’acquérir de <strong>solides bases professionnelles</strong>, 
+    tout en confirmant mon envie de poursuivre dans le développement web et mobile.
+    {% endblocktrans %}
+  </p>
+</div>
+
+
+  <!-- Étape 2 -->
+  <!-- Étape 2 -->
+<div x-data 
+x-intersect.once="$el.classList.add('opacity-100','translate-x-0'); $el.classList.remove('opacity-0','translate-x-10')"
+class="ml-6 opacity-0 translate-x-10 transition-all duration-700">
+
+<!-- Année -->
+<time class="text-sm font-semibold text-secondary block mb-2">
+{% trans "Sept. 2022 – Sept. 2024" %}
+</time>
+
+<!-- Formation + Logo -->
+<div class="flex items-center justify-between gap-4">
+<h3 class="text-lg font-bold text-tertiary">
+ {% trans "Développeuse fullstack - Alternance chez Tourdata" %}
+</h3>
+</div>
+
+<!-- Description -->
+<p class="text-light mt-3">
+{% blocktrans %}
+J’ai eu la chance d’effectuer mes deux années de master en alternance au sein de la start-up <strong>TourData</strong>, spécialisée dans le développement web et mobile. 
+Cette expérience en <strong>full remote</strong> m’a permis de contribuer à des projets variés tout en développant une forte autonomie et un sens aigu de l’initiative.
+{% endblocktrans %}
+</p>
+
+<!-- Liste à puces -->
+<ul class="space-y-2 mt-3 text-light">
+<li class="flex items-start gap-3">
+ <img src="{% static 'svg/check.svg' %}" class="w-5 h-5 mt-1" >
+ {% trans "Refonte de sites vitrines avec Tailwind CSS" %}
+</li>
+<li class="flex items-start gap-3">
+ <img src="{% static 'svg/check.svg' %}" class="w-5 h-5 mt-1" >
+ {% trans "Développement back-end avec Django et conception d’API REST (Django REST Framework)" %}
+</li>
+<li class="flex items-start gap-3">
+ <img src="{% static 'svg/check.svg' %}" class="w-5 h-5 mt-1" >
+ {% trans "Refactorisation complète d’une application mobile avec Flutter + intégration d’API Django" %}
+</li>
+<li class="flex items-start gap-3">
+ <img src="{% static 'svg/check.svg' %}" class="w-5 h-5 mt-1" >
+ {% trans "Déploiement sur AWS (EC2, RDS, S3) et publication mobile sur App Store & Google Play" %}
+</li>
+<li class="flex items-start gap-3">
+ <img src="{% static 'svg/check.svg' %}" class="w-5 h-5 mt-1" >
+ {% trans "Intégration d’APIs externes (ChatGPT, Google Translate, text-to-speech…)" %}
+</li>
+<li class="flex items-start gap-3">
+ <img src="{% static 'svg/check.svg' %}" class="w-5 h-5 mt-1" >
+ {% trans "Suivi et gestion des erreurs avec Sentry pour améliorer la fiabilité des applications" %}
+</li>
+<li class="flex items-start gap-3">
+ <img src="{% static 'svg/check.svg' %}" class="w-5 h-5 mt-1" >
+ {% trans "Mise en place de tests unitaires et fonctionnels pour les modules critiques" %}
+</li>
+<li class="flex items-start gap-3">
+ <img src="{% static 'svg/check.svg' %}" class="w-5 h-5 mt-1" >
+ {% trans "Gestion de projet : documentation technique et planification via Notion" %}
+</li>
+</ul>
+
+<p class="text-light mt-3">
+{% blocktrans %}
+Ce parcours m’a permis de <strong>maîtriser chaque étape</strong> du cycle de développement, de collaborer efficacement à distance, et de devenir une développeuse <strong>autonome</strong> et <strong>engagée</strong>.
+{% endblocktrans %}
+</p>
+</div>
+
+</div>
+</div>

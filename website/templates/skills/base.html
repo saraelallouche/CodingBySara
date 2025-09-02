@@ -3,20 +3,23 @@
 
 {% block content %}
 
-    <div class="relative isolate bg-primary/60 pb-32 pt-24 sm:pt-32">
+    <div class="relative isolate bg-dark pb-32 pt-36 sm:pt-32">
         <div aria-hidden="true" class="absolute inset-x-0 top-1/2 -z-10 -translate-y-1/2 transform-gpu overflow-hidden opacity-30 blur-3xl">
-          <div style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)" class="ml-[max(50%,38rem)] aspect-[1313/771] w-[82.0625rem] bg-gradient-to-tr from-primary_accent to-dark"></div>
+          <div style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)" class="ml-[max(50%,38rem)] aspect-[1313/771] w-[82.0625rem] bg-gradient-to-tr from-tertiary to-secondary"></div>
         </div>
         <div aria-hidden="true" class="absolute inset-x-0 top-0 -z-10 flex transform-gpu overflow-hidden pt-32 opacity-25 blur-3xl sm:pt-40 xl:justify-end">
-          <div style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)" class="ml-[-22rem] aspect-[1313/771] w-[82.0625rem] flex-none origin-top-right rotate-[30deg] bg-gradient-to-tr from-primary_accent to-dark xl:ml-0 xl:mr-[calc(50%-12rem)]"></div>
+          <div style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)" class="ml-[-22rem] aspect-[1313/771] w-[82.0625rem] flex-none origin-top-right rotate-[30deg] bg-gradient-to-tr from-primary_accent to-secondary xl:ml-0 xl:mr-[calc(50%-12rem)]"></div>
         </div>
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+
+        <div class="mx-auto max-w-7xl px-6 py-8 lg:py-16 lg:px-8">
           <div class="mx-auto max-w-2xl text-center">
-            <h2 class="text-base/7 font-semibold text-secondary">{% trans "Mes compétences" %}</h2>
-            <p class="mt-2 text-balance text-4xl font-semibold tracking-tight text-dark sm:text-5xl">{% trans "Mes technologies de prédilection affinées au fil de projets concrets." %}</p>
+            <h2 class="text-base/7 font-semibold text-tertiary">{% trans "Mes compétences" %}</h2>
+            <p class="mt-2 text-balance text-4xl font-semibold tracking-tight text-light sm:text-5xl">{% trans "Mes technologies de prédilection affinées au fil de projets concrets." %}</p>
           </div>
           <div class="mx-auto mt-16 grid max-w-2xl grid-cols-1 grid-rows-1 gap-8 text-sm/6 text-dark sm:mt-20 sm:grid-cols-2 xl:mx-0 xl:max-w-none xl:grid-flow-col xl:grid-cols-4">
-            <figure class="rounded-2xl bg-light text-dark hover:text-2xl/8 text-lg  sm:text-xl/8 font-semibold  shadow-lg ring-1 ring-gray-900/5 sm:col-span-2 xl:col-start-2 xl:row-end-1">
+            <figure x-data
+            x-intersect.once="$el.classList.add('opacity-100','translate-x-0'); $el.classList.remove('opacity-0','-translate-x-20')"
+            class="rounded-2xl opacity-0 translate-y-10 transition-all duration-[200ms] delay-200 bg-light text-dark hover:text-2xl/8 text-lg  sm:text-xl/8 font-semibold  shadow-lg ring-1 ring-gray-900/5 sm:col-span-2 xl:col-start-2 xl:row-end-1">
               <blockquote class="p-6 sm:p-12  tracking-tight">
                 <p>
                   {% blocktrans %}
@@ -33,7 +36,9 @@
             </figure>
             <div class="space-y-8 xl:contents xl:space-y-0">
               <div class="space-y-8 xl:row-span-2">
-                <figure class="rounded-2xl bg-light p-6 pb-0 shadow-lg ring-1 ring-gray-900/5 hover:font-semibold">
+                <figure x-data
+                x-intersect.once="$el.classList.add('opacity-100','translate-x-0'); $el.classList.remove('opacity-0','-translate-x-20')"
+                class="rounded-2xl opacity-0 translate-y-10 transition-all duration-[1000ms] delay-200 bg-light p-6 pb-0 shadow-lg ring-1 ring-gray-900/5 hover:font-semibold">
                   <blockquote class="text-dark">
                     <p>
                       {% blocktrans %}
@@ -45,7 +50,9 @@
                   <figcaption class=" flex items-center gap-x-4">
                     <svg class="h-20 w-auto ml-auto" viewBox="0 -186.5 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <defs> </defs> <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g> <g transform="translate(150.000000, 31.000000)" fill="#B52E31"> <path d="M0.6,71.8 L0.6,8.8 L8.7,8.8 L47.2,59.5 L47.2,8.8 L54.9,8.8 L54.9,71.8 L46.8,71.8 L8.3,20.6 L8.3,71.8 L0.6,71.8 L0.6,71.8 Z"> </path> <path d="M117.6,69.3 C112.5,71.2 107,72.2 101.2,72.2 C78.4,72.2 67,61.3 67,39.4 C67,18.7 78,8.3 100,8.3 C106.3,8.3 112.2,9.2 117.6,10.9 L117.6,17.9 C112.2,15.8 106.6,14.8 100.9,14.8 C83.7,14.8 75.1,23 75.1,39.2 C75.1,56.7 83.6,65.4 100.5,65.4 C103.2,65.4 106.2,65 109.5,64.3 L109.5,43.2 L117.6,43.2 L117.6,69.3 L117.6,69.3 Z"> </path> <path d="M130.6,47.5 L130.6,8.8 L138.7,8.8 L138.7,47.5 C138.7,59.6 144.7,65.7 156.8,65.7 C168.8,65.7 174.9,59.6 174.9,47.5 L174.9,8.8 L183,8.8 L183,47.5 C183,64 174.3,72.3 156.8,72.3 C139.3,72.3 130.6,64 130.6,47.5 L130.6,47.5 L130.6,47.5 Z"> </path> <path d="M205.6,8.8 L205.6,65.2 L238.6,65.2 L238.6,71.8 L197.5,71.8 L197.5,8.8 L205.6,8.8 L205.6,8.8 Z"> </path> <path d="M250.3,71.8 L241.8,71.8 L273.1,0.5 L304.4,71.8 L295.4,71.8 L287.3,52 L266.5,52 L268.7,45.4 L284.6,45.4 L272.8,16.9 L250.3,71.8 L250.3,71.8 Z"> </path> <path d="M313.1,71.8 L313.1,8.8 L340,8.8 C352,8.8 358,13.8 358,23.9 C358,32.1 352.1,38.2 340.4,42.1 L362,71.8 L351.3,71.8 L331.3,43.5 L331.3,38.2 C343.3,36.3 349.4,31.7 349.4,24.3 C349.4,18.5 346.1,15.6 339.4,15.6 L321.4,15.6 L321.4,71.8 L313.1,71.8 L313.1,71.8 Z"> </path> </g> <g> <path d="M0,23 L64.5,0 L130.7,22.6 L120,107.9 L64.5,138.6 L9.9,108.3 L0,23 L0,23 Z" fill="#E23237"> </path> <path d="M130.7,22.6 L64.5,0 L64.5,138.6 L120,107.9 L130.7,22.6 L130.7,22.6 Z" fill="#B52E31"> </path> <path d="M64.6,16.2 L64.6,16.2 L24.4,105.6 L39.4,105.3 L47.5,85.1 L64.6,85.1 L83.4,85.1 L92.2,105.5 L106.5,105.8 L64.6,16.2 L64.6,16.2 Z M64.7,44.9 L78.3,73.3 L65.3,73.3 L64.6,73.3 L52.8,73.3 L64.7,44.9 L64.7,44.9 Z" fill="#FFFFFF"> </path> </g> </g> </g> </g></svg>                  </figcaption>
                 </figure>
-                <figure class="rounded-2xl bg-light p-6 shadow-lg ring-1 ring-gray-900/5 hover:font-semibold">
+                <figure x-data
+                x-intersect.once="$el.classList.add('opacity-100','translate-x-0'); $el.classList.remove('opacity-0','-translate-x-20')"
+                class="rounded-2xl opacity-0 translate-y-10 transition-all duration-[1000ms] delay-200 bg-light p-6 shadow-lg ring-1 ring-gray-900/5 hover:font-semibold">
                   <blockquote class="text-dark">
                     <p>
                       {% blocktrans %}
@@ -56,7 +63,9 @@
                 </blockquote>
                   <figcaption class="mt-6 flex items-center gap-x-4">
                     <svg class="h-12 w-auto ml-auto" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><title>file_type_flutter</title><polyline points="15.383 18.316 18.744 15.042 27.093 15.042 19.697 22.438 15.383 18.316 15.383 18.316 15.383 18.316 15.383 18.316 15.383 18.316" style="fill:#40d0fd"></polyline><polygon points="4.907 16.125 9.106 20.424 27.093 2.287 18.744 2.287 4.907 16.125" style="fill:#41d0fd;isolation:isolate"></polygon><polygon points="11.176 22.479 15.435 26.675 19.697 22.438 15.383 18.316 11.176 22.479" style="fill:#1fbcfd"></polygon><polygon points="15.435 26.675 19.697 22.438 26.989 29.813 18.593 29.813 15.435 26.675" style="fill:#095a9d"></polygon><polygon points="15.435 26.675 19.406 25.354 18.068 24.057 15.435 26.675" style="fill:#0e5199"></polygon></g></svg>                </figure>
-                <figure class="rounded-2xl bg-light p-6 shadow-lg ring-1 ring-gray-900/5 hover:font-semibold">
+                <figure x-data
+                x-intersect.once="$el.classList.add('opacity-100','translate-x-0'); $el.classList.remove('opacity-0','-translate-x-20')"
+                class="rounded-2xl opacity-0 translate-y-10 transition-all duration-[1000ms] delay-200 bg-light p-6 shadow-lg ring-1 ring-gray-900/5 hover:font-semibold">
                   <blockquote class="text-dark">
                     <p>
                       {% blocktrans %}
@@ -67,7 +76,9 @@
                   <figcaption class="mt-6 flex items-center gap-x-4">
                     <svg class="h-8 w-auto ml-auto" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>github [#142]</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Dribbble-Light-Preview" transform="translate(-140.000000, -7559.000000)" fill="#000000"> <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M94,7399 C99.523,7399 104,7403.59 104,7409.253 C104,7413.782 101.138,7417.624 97.167,7418.981 C96.66,7419.082 96.48,7418.762 96.48,7418.489 C96.48,7418.151 96.492,7417.047 96.492,7415.675 C96.492,7414.719 96.172,7414.095 95.813,7413.777 C98.04,7413.523 100.38,7412.656 100.38,7408.718 C100.38,7407.598 99.992,7406.684 99.35,7405.966 C99.454,7405.707 99.797,7404.664 99.252,7403.252 C99.252,7403.252 98.414,7402.977 96.505,7404.303 C95.706,7404.076 94.85,7403.962 94,7403.958 C93.15,7403.962 92.295,7404.076 91.497,7404.303 C89.586,7402.977 88.746,7403.252 88.746,7403.252 C88.203,7404.664 88.546,7405.707 88.649,7405.966 C88.01,7406.684 87.619,7407.598 87.619,7408.718 C87.619,7412.646 89.954,7413.526 92.175,7413.785 C91.889,7414.041 91.63,7414.493 91.54,7415.156 C90.97,7415.418 89.522,7415.871 88.63,7414.304 C88.63,7414.304 88.101,7413.319 87.097,7413.247 C87.097,7413.247 86.122,7413.234 87.029,7413.87 C87.029,7413.87 87.684,7414.185 88.139,7415.37 C88.139,7415.37 88.726,7417.2 91.508,7416.58 C91.513,7417.437 91.522,7418.245 91.522,7418.489 C91.522,7418.76 91.338,7419.077 90.839,7418.982 C86.865,7417.627 84,7413.783 84,7409.253 C84,7403.59 88.478,7399 94,7399" id="github-[#142]"> </path> </g> </g> </g> </g></svg>                  </figcaption>
                 </figure>
-                <figure class="rounded-2xl bg-light p-6 shadow-lg ring-1 ring-gray-900/5 hover:font-semibold">
+                <figure x-data
+                x-intersect.once="$el.classList.add('opacity-100','translate-x-0'); $el.classList.remove('opacity-0','-translate-x-20')"
+                class="rounded-2xl opacity-0 translate-y-10 transition-all duration-[1000ms] delay-200 bg-light p-6 shadow-lg ring-1 ring-gray-900/5 hover:font-semibold">
                     <blockquote class="text-dark">
                       <p>
                         {% blocktrans %}
@@ -81,7 +92,9 @@
                   </figure>
               </div>
               <div class="space-y-8 xl:row-start-1">
-                <figure class="rounded-2xl bg-light p-6 shadow-lg ring-1 ring-gray-900/5 hover:font-semibold">
+                <figure x-data
+                x-intersect.once="$el.classList.add('opacity-100','translate-x-0'); $el.classList.remove('opacity-0','-translate-x-20')"
+                class="rounded-2xl opacity-0 translate-y-10 transition-all duration-[1000ms] delay-200 bg-light p-6 shadow-lg ring-1 ring-gray-900/5 hover:font-semibold">
                   <blockquote class="text-dark">
                     <p>
                       {% blocktrans %}
@@ -98,7 +111,9 @@
                         <path d="M0 13.01v-2l7.09 -2.98 0.58 1.94 -5.1 2.05 5.16 2.05 -0.63 1.9Zm16.37 1.03 5.18 -2 -5.16 -2.09 0.65 -1.88L24 10.95v2.12L17 16zm-2.85 -9.98H16l-5.47 15.88H8.05Z" fill="#000000" stroke-width="1"></path>
                       </svg>                  </figcaption>
                 </figure>
-                <figure class="rounded-2xl bg-light p-6 shadow-lg ring-1 ring-gray-900/5 hover:font-semibold">
+                <figure x-data
+                x-intersect.once="$el.classList.add('opacity-100','translate-x-0'); $el.classList.remove('opacity-0','-translate-x-20')"
+                class="rounded-2xl opacity-0 translate-y-10 transition-all duration-[1000ms] delay-200 bg-light p-6 shadow-lg ring-1 ring-gray-900/5 hover:font-semibold">
                   <blockquote class="text-dark">
                     <p>
                       {% blocktrans %}
@@ -109,7 +124,9 @@
                   <figcaption class="mt-6 flex items-center gap-x-4">
                     <svg class="h-10 w-auto ml-auto" viewBox="0 -30 150 150" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M122.714 62.703c5.28-.643 16.924-2.027 18.997.643 2.072 2.621-2.319 13.649-4.293 18.544-.592 1.484.691 2.077 2.023.94 8.684-7.319 10.954-22.6 9.178-24.825-1.777-2.175-17.023-4.055-26.3 2.473-1.431 1.038-1.184 2.423.395 2.225z" fill="#F90"></path> <path d="M74.852 89.456c20.28 0 43.865-6.38 60.099-18.396 2.664-1.978.345-4.994-2.369-3.758-18.207 7.714-37.993 11.473-56.003 11.473-26.694 0-52.5-7.368-73.42-19.533-1.827-1.088-3.208.791-1.679 2.176 19.343 17.505 44.951 28.038 73.372 28.038z" fill="#F90"></path> <path d="M42.632 32.835c0 1.83.197 3.313.542 4.401a26.505 26.505 0 001.58 3.56c.246.396.345.792.345 1.138 0 .495-.296.99-.938 1.484l-3.108 2.077c-.444.296-.889.445-1.283.445-.494 0-.987-.248-1.48-.693a15.29 15.29 0 01-1.777-2.324 38.28 38.28 0 01-1.53-2.918c-3.848 4.55-8.684 6.825-14.506 6.825-4.145 0-7.45-1.187-9.868-3.56-2.418-2.374-3.652-5.54-3.652-9.495 0-4.204 1.48-7.616 4.49-10.187 3.01-2.572 7.007-3.857 12.09-3.857 1.677 0 3.404.148 5.23.395 1.825.248 3.7.643 5.674 1.088v-3.61c0-3.758-.79-6.379-2.32-7.912-1.578-1.533-4.243-2.274-8.042-2.274-1.727 0-3.503.197-5.329.642a39.247 39.247 0 00-5.329 1.682 14.14 14.14 0 01-1.727.643c-.345.098-.592.148-.79.148-.69 0-1.036-.494-1.036-1.533V6.577c0-.791.1-1.385.346-1.73.246-.347.69-.693 1.381-1.04 1.727-.89 3.8-1.631 6.217-2.225C20.23.94 22.797.642 25.51.642c5.872 0 10.164 1.336 12.927 4.006 2.714 2.67 4.096 6.726 4.096 12.165v16.022h.099zm-20.033 7.517c1.628 0 3.306-.297 5.082-.89 1.776-.594 3.355-1.682 4.687-3.165.79-.94 1.382-1.978 1.678-3.165.296-1.187.493-2.621.493-4.302v-2.077a41.135 41.135 0 00-4.539-.84 37.099 37.099 0 00-4.638-.298c-3.306 0-5.724.643-7.352 1.978-1.628 1.336-2.418 3.215-2.418 5.687 0 2.324.592 4.055 1.826 5.242 1.184 1.236 2.911 1.83 5.18 1.83zm39.621 5.34c-.888 0-1.48-.148-1.875-.494-.394-.297-.74-.99-1.036-1.929L47.714 5.044c-.296-.99-.444-1.632-.444-1.978 0-.791.394-1.236 1.184-1.236h4.835c.938 0 1.58.148 1.925.494.395.297.69.99.987 1.929l8.29 32.736 7.697-32.736c.246-.99.542-1.632.937-1.929.395-.297 1.085-.494 1.974-.494h3.947c.938 0 1.579.148 1.974.494.395.297.74.99.937 1.929l7.796 33.132L98.29 4.253c.295-.99.64-1.632.986-1.929.395-.297 1.036-.494 1.925-.494h4.588c.79 0 1.234.395 1.234 1.236 0 .247-.049.494-.099.791a7.041 7.041 0 01-.345 1.236L94.688 43.32c-.297.989-.642 1.631-1.037 1.928-.394.297-1.036.495-1.875.495h-4.243c-.938 0-1.58-.149-1.974-.495-.394-.346-.74-.989-.937-1.978l-7.648-31.895-7.599 31.846c-.247.989-.543 1.632-.938 1.978-.394.346-1.085.494-1.973.494H62.22zm63.405 1.336c-2.566 0-5.132-.297-7.599-.89-2.467-.594-4.391-1.237-5.674-1.979-.79-.445-1.332-.94-1.53-1.384a3.503 3.503 0 01-.296-1.385v-2.522c0-1.038.395-1.533 1.135-1.533.296 0 .592.05.888.148.296.1.74.297 1.234.495a26.791 26.791 0 005.428 1.73c1.973.396 3.898.594 5.871.594 3.109 0 5.527-.544 7.204-1.632 1.678-1.088 2.566-2.67 2.566-4.698 0-1.384-.444-2.521-1.332-3.461-.888-.94-2.566-1.78-4.984-2.571l-7.154-2.226c-3.602-1.137-6.267-2.818-7.895-5.044-1.628-2.176-2.467-4.599-2.467-7.17 0-2.077.444-3.907 1.332-5.489.888-1.582 2.072-2.967 3.553-4.055 1.48-1.137 3.157-1.978 5.131-2.571 1.974-.594 4.046-.841 6.217-.841 1.086 0 2.221.05 3.306.198 1.135.148 2.171.346 3.207.544.987.247 1.925.494 2.813.79.888.298 1.579.594 2.072.891.691.396 1.185.791 1.481 1.236.296.396.444.94.444 1.632V8.16c0 1.039-.395 1.583-1.135 1.583-.395 0-1.036-.198-1.875-.594-2.813-1.285-5.971-1.928-9.474-1.928-2.812 0-5.033.445-6.562 1.384-1.53.94-2.319 2.374-2.319 4.402 0 1.384.493 2.57 1.48 3.51s2.812 1.88 5.427 2.72l7.007 2.226c3.553 1.137 6.118 2.72 7.648 4.747 1.53 2.027 2.27 4.351 2.27 6.923 0 2.126-.444 4.055-1.283 5.736-.888 1.681-2.072 3.165-3.602 4.352-1.53 1.236-3.355 2.126-5.477 2.769-2.22.692-4.54 1.039-7.056 1.039z" fill="#252F3E"></path> </g></svg>                  </figcaption>
                 </figure>
-                <figure class="rounded-2xl bg-light p-6 shadow-lg ring-1 ring-gray-900/5 hover:font-semibold">
+                <figure x-data
+                x-intersect.once="$el.classList.add('opacity-100','translate-x-0'); $el.classList.remove('opacity-0','-translate-x-20')"
+                class="rounded-2xl opacity-0 translate-y-10 transition-all duration-[1000ms] delay-200 bg-light p-6 shadow-lg ring-1 ring-gray-900/5 hover:font-semibold">
                     <blockquote class="text-dark">
                       <p>
                         {% blocktrans %}
@@ -124,7 +141,9 @@
             </div>
             <div class="space-y-8 xl:contents xl:space-y-0">
               <div class="space-y-8 xl:row-start-1">
-                <figure class="rounded-2xl bg-light p-6 shadow-lg ring-1 ring-gray-900/5 hover:font-semibold">
+                <figure x-data
+                x-intersect.once="$el.classList.add('opacity-100','translate-x-0'); $el.classList.remove('opacity-0','-translate-x-20')"
+                class="rounded-2xl opacity-0 translate-y-10 transition-all duration-[1000ms] delay-200 bg-light p-6 shadow-lg ring-1 ring-gray-900/5 hover:font-semibold">
                   <blockquote class="text-dark">
                     <p>
                       {% blocktrans %}
@@ -136,7 +155,9 @@
                     <svg class="h-12 w-auto ml-auto" fill="#000000" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="m24 12-5.72 5.746-5.724-5.741 5.724-5.75L24 12zM5.72 6.254 0 12l5.72 5.746h11.44L5.72 6.254z"></path></g></svg>                    
                   </figcaption>
                 </figure>
-                <figure class="rounded-2xl bg-light p-6 shadow-lg ring-1 ring-gray-900/5 hover:font-semibold">
+                <figure x-data
+                x-intersect.once="$el.classList.add('opacity-100','translate-x-0'); $el.classList.remove('opacity-0','-translate-x-20')"
+                class="rounded-2xl opacity-0 translate-y-10 transition-all duration-[1000ms] delay-200 bg-light p-6 shadow-lg ring-1 ring-gray-900/5 hover:font-semibold">
                   <blockquote class="text-dark">
                     <p>
                       {% blocktrans %}
@@ -149,7 +170,9 @@
                   </figcaption>
                 </figure>
 
-                <figure class="rounded-2xl bg-light p-6 shadow-lg ring-1 ring-gray-900/5 hover:font-semibold">
+                <figure x-data
+                x-intersect.once="$el.classList.add('opacity-100','translate-x-0'); $el.classList.remove('opacity-0','-translate-x-20')"
+                class="rounded-2xl opacity-0 translate-y-10 transition-all duration-[1000ms] delay-200 bg-light p-6 shadow-lg ring-1 ring-gray-900/5 hover:font-semibold">
                     <blockquote class="text-dark">
                       <p>
                         {% blocktrans %}
@@ -164,7 +187,9 @@
 
               </div>
               <div class="space-y-8 xl:row-span-2">
-                <figure class="rounded-2xl bg-light p-6 shadow-lg ring-1 ring-gray-900/5 hover:font-semibold">
+                <figure x-data
+                x-intersect.once="$el.classList.add('opacity-100','translate-x-0'); $el.classList.remove('opacity-0','-translate-x-20')"
+                class="rounded-2xl opacity-0 translate-y-10 transition-all duration-[1000ms] delay-200 bg-light p-6 shadow-lg ring-1 ring-gray-900/5 hover:font-semibold">
                   <blockquote class="text-dark">
                     <p>
                       {% blocktrans %}
@@ -176,7 +201,9 @@
                     <svg class="h-12 w-auto ml-auto" fill="#000000" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="c133de6af664cd4f011a55de6b000d0b"> <path display="inline" d="M108.669,0.501h23.032v22.756h21.069V0.501h23.034V69.41h-23.032V46.334h-21.069V69.41h-23.032V0.501 H108.669z M206.091,23.353h-20.275V0.501h63.594v22.852h-20.285V69.41h-23.032V23.353H206.091z M259.502,0.501h24.02l14.771,24.213 l14.759-24.213h24.023V69.41h-22.938V35.256l-15.845,24.5h-0.395l-15.856-24.5V69.41h-22.539V0.501z M348.54,0.501h23.038v46.133 h32.391V69.41H348.54V0.501z M74.987,100.926l32.946,369.533l147.844,41.04L404.031,470.4l32.981-369.475H74.987z M368.289,188.62 l-2.063,22.977l-0.906,10.188h-0.149H256h-0.158h-63.956l4.142,46.407h59.814H256h92.98h12.214l-1.106,12.172l-10.65,119.32 l-0.682,7.652L256,433.045v0.008l-0.208,0.059l-92.839-25.774l-6.351-71.161h20.97h24.527l3.227,36.146l50.474,13.632l0.042-0.013 v-0.004l50.551-13.64l5.257-58.781H256h-0.158H154.578L143.439,188.62l-1.085-12.157h113.488H256h113.374L368.289,188.62z"> </path> </g> </g></svg>                    
                   </figcaption>
                 </figure>
-                <figure class="rounded-2xl bg-light p-6 shadow-lg ring-1 ring-gray-900/5 hover:font-semibold">
+                <figure x-data
+                x-intersect.once="$el.classList.add('opacity-100','translate-x-0'); $el.classList.remove('opacity-0','-translate-x-20')"
+                class="rounded-2xl opacity-0 translate-y-10 transition-all duration-[1000ms] delay-200 bg-light p-6 shadow-lg ring-1 ring-gray-900/5 hover:font-semibold">
                   <blockquote class="text-dark">
                     <p>  
                       {% blocktrans %}                     
@@ -189,7 +216,9 @@
                     <svg class="h-12 w-auto ml-auto" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><title>file_type_tailwind</title><path d="M9,13.7q1.4-5.6,7-5.6c5.6,0,6.3,4.2,9.1,4.9q2.8.7,4.9-2.1-1.4,5.6-7,5.6c-5.6,0-6.3-4.2-9.1-4.9Q11.1,10.9,9,13.7ZM2,22.1q1.4-5.6,7-5.6c5.6,0,6.3,4.2,9.1,4.9q2.8.7,4.9-2.1-1.4,5.6-7,5.6c-5.6,0-6.3-4.2-9.1-4.9Q4.1,19.3,2,22.1Z" style="fill:#44a8b3"></path></g></svg>                    
                   </figcaption>
                 </figure>
-                <figure class="rounded-2xl bg-light p-6 shadow-lg ring-1 ring-gray-900/5 hover:font-semibold">
+                <figure x-data
+                x-intersect.once="$el.classList.add('opacity-100','translate-x-0'); $el.classList.remove('opacity-0','-translate-x-20')"
+                class="rounded-2xl opacity-0 translate-y-10 transition-all duration-[1000ms] delay-200 bg-light p-6 shadow-lg ring-1 ring-gray-900/5 hover:font-semibold">
                   <blockquote class="text-dark">
                     <p>
                       {% blocktrans %}
@@ -201,7 +230,9 @@
                     <svg class="h-12 w-auto ml-auto" version="1.1" id="_x34_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <g> <g> <path style="fill:#39526C;" d="M403.383,332.812v111.589c0,37.366-90.273,67.599-201.692,67.599 c-70.571,0-132.734-12.144-168.742-30.573c-18.513-9.426-30.063-20.466-32.44-32.44C0.169,447.458,0,445.93,0,444.401V332.812 c0-0.34,0-0.679,0.084-1.018c-0.084-0.17-0.084-0.255,0-0.34c0-0.595,0.085-1.189,0.17-1.783c0.085-0.255,0.085-0.51,0.17-0.765 c0.085-0.68,0.254-1.358,0.51-2.038v-0.085c0.34-1.358,0.849-2.633,1.444-3.991c11.21-24.373,61.23-44.499,128.318-52.907 c8.747-1.105,17.834-2.038,27.09-2.718h0.51c14.012-1.104,28.535-1.613,43.396-1.613s29.383,0.509,43.395,1.613h0.509 c9.256,0.68,18.343,1.613,27.09,2.718c67.089,8.407,117.108,28.534,128.318,52.907c0.595,1.358,1.104,2.633,1.444,3.991v0.085 c0.255,0.68,0.424,1.358,0.509,2.038c0.17,0.849,0.255,1.613,0.34,2.548v0.34C403.383,332.133,403.383,332.472,403.383,332.812z "></path> <path style="opacity:0.1;fill:#E8E8E9;" d="M403.383,333.152v5.35c0,37.366-90.273,67.683-201.692,67.683 C90.272,406.185,0,375.868,0,338.502v-5.35c0,0.849,0.084,1.613,0.169,2.378c2.633,26.326,50.274,48.916,117.958,59.191 c2.378,0.34,4.671,0.68,7.049,1.019c3.821,0.594,7.643,1.104,11.549,1.529c1.614,0.085,3.312,0.255,5.01,0.509 c9.427,1.019,19.193,1.784,29.213,2.293c6.709,0.339,13.503,0.594,20.382,0.679c3.397,0.085,6.879,0.085,10.361,0.085 c3.482,0,6.963,0,10.36-0.085c6.879-0.085,13.672-0.34,20.382-0.679c10.021-0.509,19.787-1.274,29.213-2.293 c1.698-0.254,3.397-0.424,5.01-0.509c3.907-0.425,7.728-0.935,11.549-1.529c2.378-0.339,4.671-0.679,7.049-1.019 c67.684-10.275,115.325-32.865,117.958-59.191C403.298,334.765,403.383,334.001,403.383,333.152z"></path> <path style="fill:#CEDCE4;" d="M403.383,332.472v0.68c0,0.849-0.085,1.613-0.17,2.378 c-3.567,26.411-50.954,48.746-117.958,59.191c-2.378,0.34-4.671,0.68-7.049,1.019c-2.378,0.34-4.756,0.594-7.133,0.934 c-1.444,0.17-2.973,0.34-4.416,0.595c-1.613,0.085-3.312,0.255-5.01,0.509c-6.285,0.594-12.738,1.189-19.278,1.614 c-3.312,0.255-6.624,0.509-9.936,0.679c-6.709,0.255-13.503,0.509-20.382,0.679c-3.397,0.085-6.879,0.085-10.36,0.085 c-3.482,0-6.964,0-10.361-0.085c-6.879-0.17-13.672-0.424-20.382-0.679c-3.312-0.17-6.624-0.424-9.936-0.679 c-6.539-0.425-12.993-1.02-19.278-1.614c-1.698-0.254-3.397-0.424-5.01-0.509c-1.443-0.255-2.972-0.425-4.416-0.595 c-2.378-0.34-4.756-0.594-7.133-0.934c-2.378-0.339-4.671-0.679-7.049-1.019C51.123,384.276,3.736,361.941,0.169,335.53 C0.084,334.765,0,334.001,0,333.152v-0.68c0-0.254,0-0.424,0.084-0.678c-0.084-0.17-0.084-0.255,0-0.34 c0.085-0.935,0.17-1.699,0.34-2.548c0.085-0.425,0.169-0.849,0.169-1.274c-0.084-0.169,0-0.339,0.085-0.509 c0-0.17,0-0.425,0.085-0.68c0.17-0.509,0.255-1.103,0.51-1.613c0.255-0.765,0.595-1.613,0.934-2.463 c10.531-24.203,58.512-44.245,123.308-53.162c7.728-1.103,15.711-2.038,23.948-2.717c0.085-0.085,0.255-0.085,0.34-0.085 c16.56-1.529,33.969-2.293,51.888-2.293c17.919,0,35.328,0.764,51.888,2.293c0.085,0,0.255,0,0.34,0.085 c8.238,0.679,16.221,1.614,23.948,2.717c64.796,8.917,112.778,28.959,123.308,53.162c0.594,1.359,1.104,2.718,1.444,4.076 c0.17,0.85,0.17,1.614,0.339,2.463c0.17,0.849,0.255,1.613,0.34,2.548v0.34C403.298,331.963,403.383,332.218,403.383,332.472z"></path> </g> <path style="fill:#CEDCE4;" d="M336.696,426.451v31.189c-16.248,4.913-34.889,8.949-55.283,11.888v-31.189 C301.808,435.4,320.448,431.364,336.696,426.451z"></path> </g> <path style="opacity:0.3;fill:#040000;" d="M402.619,326.443c-0.085,0.17-0.085,0.255-0.17,0.34v0.085 c-9.511,34.309-95.708,61.144-200.757,61.144c-105.05,0-191.246-26.835-200.758-61.144v-0.085 c-0.085-0.085-0.085-0.17-0.085-0.255l-0.085-0.085c0.17-0.509,0.255-1.103,0.51-1.613c0.255-0.765,0.595-1.613,0.934-2.463 c10.531-24.203,58.512-44.245,123.308-53.162c7.728-1.103,15.711-2.038,23.948-2.717c0.085-0.085,0.255-0.085,0.34-0.085 c16.56-1.529,33.969-2.293,51.888-2.293c17.919,0,35.328,0.764,51.888,2.293c0.085,0,0.255,0,0.34,0.085 c8.238,0.679,16.221,1.614,23.948,2.717c64.796,8.917,112.778,28.959,123.308,53.162 C401.77,323.726,402.279,325.085,402.619,326.443z"></path> <g> <g> <path style="fill:#39526C;" d="M403.383,200.842v111.505c0,3.396-0.765,6.793-2.208,10.02c-0.085,0.17-0.17,0.34-0.17,0.425 c-15.031,32.44-98.51,57.153-199.314,57.153c-100.804,0-184.283-24.713-199.314-57.153c0-0.085-0.085-0.255-0.17-0.425 c-0.34-0.849-0.679-1.698-0.934-2.463c-0.255-0.848-0.51-1.613-0.68-2.462c0,0,0-0.085,0-0.17 c-0.254-0.679-0.34-1.444-0.425-2.208C0.084,314.129,0,313.28,0,312.346V200.758c0-1.954,0.34-3.992,0.849-5.86 c0.085-0.17,0.085-0.34,0.17-0.425c0.34-1.273,0.849-2.547,1.359-3.736c11.295-24.373,61.399-44.499,128.403-52.907 c8.747-1.104,17.749-2.038,27.005-2.718c14.098-1.018,28.789-1.613,43.906-1.613c15.116,0,29.807,0.595,43.905,1.613 c9.256,0.68,18.258,1.614,27.005,2.718c67.004,8.407,117.108,28.534,128.403,52.907c0.51,1.189,1.019,2.463,1.359,3.736 c0.085,0.085,0.085,0.255,0.17,0.425C403.043,196.85,403.383,198.804,403.383,200.842z"></path> <path style="opacity:0.1;fill:#E8E8E9;" d="M403.383,201.182v5.351c0,28.278-51.888,52.482-125.516,62.672 c-1.699,0.17-3.482,0.425-5.18,0.68c-22.08,2.717-46.029,4.246-70.995,4.246c-24.967,0-48.916-1.529-70.996-4.246 c-1.699-0.255-3.482-0.51-5.18-0.68C51.888,259.015,0,234.811,0,206.533v-5.351c0,0.765,0.084,1.614,0.169,2.378 c2.718,26.921,52.652,49.935,122.969,59.871c0.679,0.085,1.358,0.17,2.038,0.255c5.435,0.848,10.87,1.443,16.56,2.038 c2.548,0.255,5.096,0.509,7.728,0.764c2.718,0.254,5.52,0.509,8.322,0.679h0.51c10.7,0.85,21.74,1.359,33.035,1.529 c3.397,0.084,6.879,0.084,10.361,0.084c3.482,0,6.963,0,10.36-0.084c11.295-0.17,22.335-0.679,33.035-1.529h0.509 c2.803-0.17,5.605-0.425,8.322-0.679c2.633-0.255,5.18-0.509,7.728-0.764c5.69-0.595,11.125-1.19,16.56-2.038l2.039-0.255 c70.316-9.936,120.25-32.95,122.968-59.871C403.298,202.796,403.383,201.947,403.383,201.182z"></path> <path style="fill:#CEDCE4;" d="M403.383,200.418v0.764c0,0.765-0.085,1.614-0.17,2.378 c-3.652,26.921-53.332,49.765-122.968,59.871l-2.039,0.255c-2.378,0.339-4.756,0.594-7.133,0.933 c-3.142,0.34-6.2,0.68-9.426,1.105c-2.633,0.255-5.35,0.509-8.068,0.679c-2.803,0.254-5.605,0.509-8.492,0.764 c-0.934,0-1.784,0.085-2.718,0.17c-3.312,0.255-6.624,0.425-9.936,0.595c-6.709,0.339-13.503,0.594-20.382,0.764h-20.721 c-6.879-0.17-13.672-0.425-20.382-0.764c-3.312-0.17-6.624-0.34-9.936-0.595c-0.934-0.085-1.783-0.17-2.718-0.17 c-2.887-0.255-5.69-0.51-8.492-0.764c-2.718-0.17-5.435-0.424-8.068-0.679c-3.227-0.425-6.284-0.765-9.426-1.105 c-2.378-0.339-4.756-0.594-7.133-0.933c-0.679-0.085-1.359-0.17-2.038-0.255C53.501,253.324,3.821,230.481,0.169,203.56 C0.084,202.796,0,201.947,0,201.182v-0.764c0-0.849,0.084-1.699,0.169-2.547c0.085-0.85,0.17-1.699,0.425-2.548 c0-0.255,0.085-0.595,0.17-0.85h401.855c0.185,0.708,0.159,1.442,0.277,2.153c0.208,1.034,0.343,2.082,0.404,3.142 C403.306,199.987,403.383,200.195,403.383,200.418z"></path> </g> <path style="fill:#CEDCE4;" d="M336.696,294.411v31.189c-16.248,4.913-34.889,8.949-55.283,11.888v-31.189 C301.808,303.359,320.448,299.324,336.696,294.411z"></path> </g> <path style="opacity:0.3;fill:#040000;" d="M402.534,194.472v0.425c-9.766,34.309-95.878,61.144-200.842,61.144 c-104.965,0-191.076-26.835-200.843-61.144v-0.425H402.534z"></path> <g> <g> <path style="fill:#39526C;" d="M403.383,68.787v111.504c0,3.566-0.85,7.049-2.378,10.445c-0.594,1.274-1.274,2.463-2.038,3.736 c-19.363,30.573-100.294,53.502-197.275,53.502c-96.982,0-177.913-22.929-197.276-53.502c-0.764-1.273-1.444-2.462-2.038-3.736 c0-0.085-0.085-0.255-0.17-0.425c-0.34-0.763-0.679-1.613-0.934-2.462c-0.255-0.679-0.425-1.359-0.595-2.038 c-0.085-0.255-0.169-0.594-0.169-0.849c-0.17-0.68-0.255-1.274-0.34-1.953C0.084,182.074,0,181.225,0,180.291V68.702 C0.679,31.506,90.698,1.528,201.692,1.528c68.617,0,129.252,11.465,165.684,29.044c21.231,10.191,34.309,22.505,35.838,35.838 C403.298,67.173,403.383,68.023,403.383,68.787z"></path> <path style="opacity:0.1;fill:#E8E8E9;" d="M403.383,69.127v5.35c0,28.958-54.351,53.671-130.781,63.352 c-22.08,2.718-45.943,4.246-70.91,4.246c-24.967,0-48.831-1.528-70.911-4.246C54.35,128.148,0,103.435,0,74.478v-5.35 c0,30.402,59.616,56.049,141.736,64.541c5.266,0.51,10.615,1.019,16.05,1.443c14.098,1.02,28.789,1.614,43.906,1.614 c15.116,0,29.807-0.594,43.905-1.614c5.435-0.424,10.785-0.933,16.051-1.443C343.767,125.176,403.383,99.529,403.383,69.127z"></path> <path style="fill:#CEDCE4;" d="M403.383,68.363v0.424c-0.51,30.487-59.956,56.219-141.736,64.881 c-5.266,0.51-10.615,1.019-16.051,1.443c-14.097,1.02-28.789,1.614-43.905,1.614c-15.117,0-29.808-0.594-43.906-1.614 c-5.435-0.424-10.785-0.933-16.05-1.443C59.956,125.006,0.51,99.274,0,68.787v-0.424C0,30.657,90.272,0,201.692,0 c67.259,0,126.79,11.21,163.476,28.364c22.929,10.7,36.941,23.863,38.045,38.046C403.383,67.004,403.383,67.683,403.383,68.363z "></path> </g> <path style="fill:#CEDCE4;" d="M336.696,162.37v31.189c-16.248,4.913-34.889,8.949-55.283,11.888v-31.189 C301.808,171.319,320.448,167.283,336.696,162.37z"></path> </g> </g> <path style="opacity:0.2;fill:#FFFFFF;" d="M201.692,0v512c-70.571,0-132.734-12.144-168.742-30.573 c-18.513-9.426-30.063-20.466-32.44-32.44C0.169,447.458,0,445.93,0,444.401V332.472c0-0.254,0-0.424,0.084-0.678 c-0.084-0.17-0.084-0.255,0-0.34c0-0.595,0.085-1.189,0.17-1.783c0-0.68,0.085-1.36,0.34-2.039c-0.084-0.169,0-0.339,0.085-0.509 c0-0.255,0-0.425,0.17-0.595c0.085-0.594,0.254-1.103,0.425-1.698c0.255-0.765,0.595-1.613,0.934-2.463 c-0.34-0.849-0.679-1.698-0.934-2.463c-0.255-0.848-0.51-1.613-0.68-2.462c0,0,0-0.085,0-0.17c-0.254-0.679-0.34-1.444-0.425-2.208 C0.084,314.129,0,313.28,0,312.346V200.418c0-0.849,0.084-1.699,0.169-2.547c0.085-0.85,0.17-1.699,0.425-2.548 c0-0.255,0.085-0.51,0.255-0.85c0.254-1.358,0.764-2.801,1.359-4.161c-0.34-0.763-0.679-1.613-0.934-2.462 c-0.255-0.679-0.425-1.359-0.595-2.038c-0.085-0.255-0.169-0.594-0.169-0.849c-0.17-0.68-0.255-1.274-0.34-1.953 C0.084,182.074,0,181.225,0,180.291V68.363C0,30.657,90.272,0,201.692,0z"></path> </g> </g></svg>                    
                   </figcaption>
                 </figure>
-                <figure class="rounded-2xl bg-light p-6 shadow-lg ring-1 ring-gray-900/5 hover:font-semibold">
+                <figure x-data
+                x-intersect.once="$el.classList.add('opacity-100','translate-x-0'); $el.classList.remove('opacity-0','-translate-x-20')"
+                class="rounded-2xl opacity-0 translate-y-10 transition-all duration-[1000ms] delay-200 bg-light p-6 shadow-lg ring-1 ring-gray-900/5 hover:font-semibold">
                     <blockquote class="text-dark">
                       <p>
                         {% blocktrans %}

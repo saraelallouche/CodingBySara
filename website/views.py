@@ -1,3 +1,4 @@
+from typing import Any
 from django.urls import reverse
 from django.views.generic import TemplateView
 from django.contrib import messages
@@ -12,6 +13,11 @@ class HomeView(TemplateView):  # new
     template_name = "home/base.html"
     form=ContactForm
 
+    def get_context_data(self, **kwargs: Any) -> dict[str, Any]:
+        context=super().get_context_data(**kwargs)
+        context['page']='home'
+        return context
+
 
 class AboutView(TemplateView):  # new
     template_name = "about_me/base.html"
@@ -23,6 +29,12 @@ class SkillsView(TemplateView):  # new
 
 class ContactView(TemplateView):  # new
     template_name = "contact/base.html"
+    form=ContactForm
+
+    def get_context_data(self, **kwargs: Any) -> dict[str, Any]:
+        context=super().get_context_data(**kwargs)
+        context['page']='contact'
+        return context
 
 
 class PortfolioView(TemplateView):  # new
@@ -30,8 +42,11 @@ class PortfolioView(TemplateView):  # new
 
 
 def send_mail_page(request):
+    next_page = request.POST.get('next', '/')  # par défaut home si absent
+    print(next_page)
     if request.method == 'POST':
         form = ContactForm(request.POST)
+
         if form.is_valid():
             cleaned = form.cleaned_data
             subject = "SaraWeb : Nouveau message"
@@ -50,7 +65,12 @@ def send_mail_page(request):
                 messages.success(request, "Votre message a bien été envoyé.")
             except Exception as e:
                 messages.error(request, f"Une erreur est survenue lors de l'envoie de l'email. ")
+        messages.error(request, f"Une erreur est survenue lors de l'envoie de l'email. ")
     else:
         form = ContactForm()
-    return render(request, 'home/base.html', {'form': form, 'scroll_to_contact': True})
+
+    if 'contact' in next_page:
+        return render(request, 'contact/base.html', {'form': form, 'page':'contact'})
+    else:
+        return render(request, 'home/base.html', {'form': form, 'scroll_to_contact': True, 'page':'home'})
 

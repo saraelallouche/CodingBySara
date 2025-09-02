@@ -68,7 +68,7 @@ npm install
 ```
 4. **Compiler le CSS avec Tailwind**
 ```bash
-npm run build     # ou npm run dev pour watcher
+python manage.py tailwind start
 
 ```
 5. **Lancer le serveur**
@@ -77,16 +77,17 @@ python manage.py migrate
 python manage.py runserver
 ```
 
+6. **Ajouter des traductions**
+```bash
+django-admin makemessages -l en -i "venv/*" -i "node_modules/*" # met à jour le fichier locale/en/LC_MESSAGES/django.po 
+django-admin compilemessages -l en -i "venv/*" -i "node_modules/*" # compile le fichier locale/en/LC_MESSAGES/django.po 
+```
+
 ---
 
 ## 🌐 Déploiement
 
-Le site peut être facilement déployé sur :  
-
-AWS EC2 / Lightsail  
-Render / Railway / Vercel (avec adaptateur Python)  
-Docker  
-Besoin d'aide pour le déploiement ? Voir build.sh ou me contacter.  
+Le site est déployé sur AWS, vous pouvez le retrouver à l'adresse : https://www.codebysara.fr/fr/ 
 
 
 ---
@@ -103,4 +104,3 @@ Projet personnel – tous droits réservés © 2025 Sara El Allouche.
 Je suis Sara, développeuse fullstack passionnée par le code propre, l'expérience utilisateur et l'efficacité.  
 Ce site est à la fois ma vitrine et mon terrain d’expérimentation.
 
-➡️ Me contacter

@@ -43,12 +43,14 @@ module.exports = {
     theme: {
     extend: {
         colors: {
-            primary: '#d8cbbb',   // beige
-            primary_accent: '#cfab87',   // beige foncé
-            secondary: '#c6915d', // camel foncé
-            secondary_accent: '#7e4929', // camel clair
-            dark: '#614230', // marron foncé
-            light: '#f8f1e9', // blanc beige
+            primary: '#17256c',   // bleu
+            primary_accent: '#3c54fb',   // bleu foncé
+            secondary: '#7533b9', // violet
+            secondary_accent: '#8d2db2', // violet clair
+            tertiary: '#aa0e71', // rose
+            tertiary_accent: '#bc137b', // rose foncé
+            dark: '#101010', // noir
+            light: '#EDEDED', // blanc beige
         },
     },
 },

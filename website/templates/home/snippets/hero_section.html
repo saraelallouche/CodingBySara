@@ -1,67 +1,56 @@
 {% load static %}
 {% load i18n %}
-
-<section id="home" class="relative isolate overflow-hidden  z-10 "
-x-data="{
-  showFallback: false,
-  tryPlayVideo() {
+<section id="home" 
+  class="relative isolate overflow-hidden z-10"
+  x-data="{
+    showFallback: false,
+    tryPlayVideo() {
       const video = this.$refs.heroVideo;
       if (video) {
-          video.play().catch(() => {
-              this.showFallback = true;
-          });
-      }
-  }
-}"
-x-init="tryPlayVideo()"
-class="relative w-full h-full">
+        video.play().catch(() => {
+          this.showFallback = true;
+        });
 
-    <!-- Vidéo de fond -->
+        // Quand la vidéo se termine → rester figée sur le dernier frame
+        video.addEventListener('ended', () => {
+          video.currentTime = video.duration; 
+          video.pause();
+        });
+      }
+    }
+  }"
+  x-init="tryPlayVideo()"
+>
     <video x-show="!showFallback"
-           x-ref="heroVideo"
-           autoplay muted loop playsinline webkit-playsinline preload="auto"
-           class="absolute inset-0 w-full h-full object-cover object-center z-0"
-    >
-        <source src="{% static 'video/home.mp4' %}" type="video/mp4" />
+    x-ref="heroVideo" autoplay muted playsinline webkit-playsinline preload="auto" class="absolute inset-0 w-full h-full object-cover object-center z-0">
+        <source src="{% static 'video/fond.mp4' %}" type="video/mp4" />
     </video>
 
-    <!-- Image de fallback si autoplay échoue -->
-    <div x-show="showFallback" class="absolute inset-0 w-full h-full object-cover object-center z-0">
-        <img src="{% static 'images/fond.jpg' %}" alt="Background"
-             class="w-full h-full object-cover" />
-    </div>
+
+  <!-- Image de fallback si autoplay échoue -->
+  <div x-show="showFallback" 
+       class="absolute inset-0 w-full h-full object-cover object-center z-0">
+      <img src="{% static 'images/home/fond2.jpg' %}" alt="Background"
+           class="w-full h-full object-cover" />
+  </div>
 
 
 
 
     <!-- Contenu principal (au-dessus de l'overlay) -->
-    <div class="relative  mx-auto max-w-7xl px-6 lg:px-8 mt-32">
-      <div class="mx-auto pb-28">
-        <div class="hidden sm:mb-8 sm:flex sm:justify-center mt-4">
-          <div class="relative rounded-full w-auto px-3 py-1 text-sm sm:text-xl text-light ring-2 ring-dark/50 tracking-widest">
-            {% trans "DÉVELOPPEUSE FULL-STACK " %}
-          </div>
-        </div>
-        <div class="relative  pb-5">
-          <!-- Fond semi-transparent -->
-          <div class="absolute max-w-4xl mx-auto inset-0 bg-primary opacity-50 z-10 border rounded-md"></div>
-        
+    <div class="relative  mx-auto max-w-7xl px-6 lg:px-8 my-48">
           <!-- Contenu au-dessus -->
           <div class="relative z-50 text-center">
-            <h1 class="max-w-4xl mx-auto text-4xl font-semibold tracking-wider text-dark sm:text-7xl pt-10">
+            <h1 class="max-w-4xl mx-auto text-6xl md:text-8xl font-bold tracking-wider text-light  py-10">
               Sara El Allouche
             </h1>
-            <p class="max-w-3xl mx-auto mt-8 text-pretty text-md/4 text-dark sm:text-xl/8 px-6">
-              {% blocktrans %}
-                Salut, je m'appelle Sara ! <br> Je suis développeuse full-stack passionnée par les technologies web. <br>
-                Je viens d'obtenir un Master en MIAGE à l'université de la Sorbonne. <br>
-                Je suis spécialisé dans Django et les outils front-end modernes, et je recherche actuellement un poste stimulant qui me permettra de consolider mes compétences et de relever de nouveaux défis techniques.
-              {% endblocktrans %}
-
-            </p>
+            <div class=" sm:mb-8 sm:flex sm:justify-center mt-4">
+              <div class="relative rounded-full w-auto px-3 py-1 text-xl md:text-4xl text-light font-semibold  ring-2 ring-tertiary/50 tracking-widest">
+                {% trans "DÉVELOPPEUSE FULL-STACK " %}
+              </div>
+            </div>
+            
           </div>
-        </div>
         
-      </div>
     </div>
 </section>

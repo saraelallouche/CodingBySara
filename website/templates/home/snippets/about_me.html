@@ -1,11 +1,16 @@
 {% load static %}
 {% load i18n %}
 
-<section id="about" class=" bg-secondary py-24 sm:py-32">
-    <div class="relative isolate">
+<section id="about" 
+    
+    class="bg-dark py-24 sm:py-32 ">
+  
+  <div class="relative isolate">
       <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
-        <div class="mx-3 md:mx-auto flex max-w-2xl flex-col gap-16 bg-secondary_accent/50 px-6 py-6 ring-1 ring-white/10 rounded-3xl sm:p-8 lg:mx-0 lg:max-w-none lg:flex-row lg:items-center lg:py-20 xl:gap-x-20 xl:px-20">
-          <img class="max-h-96 max-w-96 mx-auto object-top w-full flex-none rounded-2xl object-cover shadow-xl lg:aspect-square lg:h-auto lg:max-w-sm" src="{% static 'images/ia.png' %}" alt="">
+        <div x-data 
+        x-intersect="$el.classList.add('opacity-100','translate-y-0'); $el.classList.remove('opacity-0','translate-y-10')" 
+         class="opacity-0 translate-y-10 transition-all duration-[2000ms] mx-3 md:mx-auto flex max-w-2xl flex-col gap-16 bg-secondary_accent/40 px-6 py-6 ring-1 ring-white/10 rounded-3xl sm:p-8 lg:mx-0 lg:max-w-none lg:flex-row lg:items-center lg:py-20 xl:gap-x-20 xl:px-20">
+          <img class="max-h-96 max-w-96 mx-auto object-top w-full flex-none rounded-2xl object-cover object-top shadow-xl lg:aspect-square lg:h-auto lg:max-w-sm" src="{% static 'images/home/ia.jpeg' %}" alt="">
           <div class="relative w-full flex-auto">
             <div class="flex items-center gap-x-8">
               <h2 class="text-pretty text-3xl font-semibold tracking-tight text-light sm:text-5xl">{% trans "À propos de moi" %}</h2>
@@ -15,7 +20,7 @@
                 </svg>
               </a>
             </div>
-            <p class="mt-6 text-pretty text-lg/8 text-primary">
+            <p class="mt-6 text-pretty text-lg/8 text-light">
               {% blocktrans %}
               Au cours de mes deux années d’alternance au sein d’une start-up spécialisée dans le développement web et mobile, j’ai acquis une expérience concrète en participant à toutes les phases des projets : de la conception à la mise en production, en passant par la maintenance évolutive. 
               Cette immersion m’a permis de mieux appréhender les enjeux techniques et organisationnels à chaque étape du cycle de développement.
@@ -26,7 +31,7 @@
           
             <div class="flex justify-end mt-6">
               <a href="{% static 'documents/CV.pdf' %}" 
-                class="bg-gradient-to-r from-light to-primary relative inline-flex items-center gap-x-1.5 rounded-full px-4 py-1.5 text-sm font-semibold text-secondary shadow-md hover:opacity-90 transition duration-300"
+                class="bg-gradient-to-r from-tertiary to-primary relative inline-flex items-center gap-x-1.5 rounded-full px-4 py-1.5 text-sm font-semibold text-light shadow-md hover:opacity-90 transition duration-300"
                 download>
                 {% trans "Téléchargez mon CV" %}
               </a>

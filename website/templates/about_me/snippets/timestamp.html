@@ -1,37 +1,78 @@
 {% load i18n %}
-<div class="bg-dark mt-16 py-6 px-6 lg:px-8 ">
-    <div class="mx-auto grid max-w-2xl grid-cols-1 gap-8 overflow-hidden lg:mx-0 lg:max-w-none lg:grid-cols-3 ">
-        <div>
-          <time datetime="2021-08" class="flex items-center text-sm/6 font-semibold text-light">
-            <svg viewBox="0 0 4 4" aria-hidden="true" class="mr-4 size-1 flex-none">
-              <circle r="2" cx="2" cy="2" fill="currentColor" />
-            </svg>
-            {% trans "Juil. 2019" %}
-            <div aria-hidden="true" class="absolute -ml-2 h-px w-screen -translate-x-full bg-primary/50 sm:-ml-4 lg:static lg:-mr-6 lg:ml-8 lg:w-auto lg:flex-auto lg:translate-x-0"></div>
-          </time>
-          <p class="mt-6 text-lg/8 font-semibold tracking-tight text-primary h-24">{% trans "Baccalauréat Scientifique option ISN <br>(Informatique et sciences du numérique)" %}</p>
+{% load static %}
+
+    <!-- Timeline -->
+    <div class="relative border-l border-primary/50 space-y-12">
+      
+      <!-- Étape 1 -->
+      <div x-data x-intersect.once="$el.classList.add('opacity-100','translate-x-0'); $el.classList.remove('opacity-0','-translate-x-10')"
+           class="ml-6 opacity-0 -translate-x-10 transition-all duration-700">
+        <time class="text-sm font-semibold text-secondary">{% trans "Juil. 2019" %}</time>
+        <div class="flex flex-col-reverse items-center gap-4 md:flex-row md:items-center md:justify-between">
+          <h3 class="text-lg font-bold text-tertiary text-left">
+            {% trans "Baccalauréat Scientifique option ISN <br>(Informatique et sciences du numérique)" %}
+          </h3>
+          <img class="w-40 max-h-20 flex-shrink-0" src="{% static 'svg/cabrini.svg' %}" alt="Université Paris 1 Panthéon-Sorbonne">
         </div>
-        <div>
-          <time datetime="2021-12" class="flex items-center text-sm/6 font-semibold text-light">
-            <svg viewBox="0 0 4 4" aria-hidden="true" class="mr-4 size-1 flex-none">
-              <circle r="2" cx="2" cy="2" fill="currentColor" />
-            </svg>
-            {% trans "Sept. 2019 – Sept. 2022" %}
-            <div aria-hidden="true" class="absolute -ml-2 h-px w-screen -translate-x-full bg-primary/50 sm:-ml-4 lg:static lg:-mr-6 lg:ml-8 lg:w-auto lg:flex-auto lg:translate-x-0"></div>
-          </time>
-          <p class="mt-6 text-lg/8 font-semibold tracking-tight text-primary  h-24">{% trans "Licence MIASHS <br> (Mathématiques et Informatique Appliquées aux Sciences Humaines et Sociales)</p>" %}
-          
-        </div>
-        <div>
-          <time datetime="2022-02" class="flex items-center text-sm/6 font-semibold text-light">
-            <svg viewBox="0 0 4 4" aria-hidden="true" class="mr-4 size-1 flex-none">
-              <circle r="2" cx="2" cy="2" fill="currentColor" />
-            </svg>
-            {% trans "Sept. 2022 – Sept. 2024" %}
-            <div aria-hidden="true" class="absolute -ml-2 h-px w-screen -translate-x-full bg-primary/50 sm:-ml-4 lg:static lg:-mr-6 lg:ml-8 lg:w-auto lg:flex-auto lg:translate-x-0"></div>
-          </time>
-          <p class="mt-6 text-lg/8 font-semibold tracking-tight text-primary h-24">{% trans "Master 2 MIAGE <br>(Méthodes Informatiques Appliquées à la Gestion des Entreprises)" %}</p>
-          
-        </div>
+        
+        
+        <p class="text-light mt-2">
+          {% blocktrans %}
+                C’est en <strong>terminale</strong> que j’ai eu mon tout premier contact avec la programmation, à travers un projet en <strong>Python</strong> (avec <strong>Tkinter</strong>) réalisé en équipe.<br>
+                Ce projet a été une véritable révélation : j’ai adoré voir une interface se construire progressivement, faire évoluer le design, et obtenir un résultat final à la fois fonctionnel et fidèle à nos attentes.<br>
+                Issue d’un profil orienté <strong>mathématiques</strong>, j’ai trouvé dans l’informatique un équilibre parfait entre <strong>logique</strong>, <strong>créativité</strong> et <strong>résolution de problèmes</strong>.<br>
+                C’est à ce moment-là que j’ai su que je voulais en faire mon métier.
+            {% endblocktrans %}
+        </p>
       </div>
-</div>
+  
+      <!-- Étape 2 -->
+      <div x-data 
+      x-intersect.once="$el.classList.add('opacity-100','translate-x-0'); $el.classList.remove('opacity-0','translate-x-10')"
+      class="ml-6 opacity-0 translate-x-10 transition-all duration-700">
+ 
+   <!-- Année -->
+   <time class="text-sm font-semibold text-secondary block mb-2">
+     {% trans "Sept. 2019 – Sept. 2022" %}
+   </time>
+ 
+   <!-- Formation + Logo -->
+   <div class="flex flex-col-reverse items-center gap-4 md:flex-row md:items-center md:justify-between">
+    <h3 class="text-lg font-bold text-tertiary text-left">
+       {% trans "Licence MIASHS <br> (Mathématiques et Informatique Appliquées aux Sciences Humaines et Sociales)" %}
+     </h3>
+ 
+     <img class="w-40 max-h-20 flex-shrink-0" src="{% static 'svg/sorbonne.svg' %}" alt="Université Paris 1 Panthéon-Sorbonne">
+   </div>
+ 
+   <!-- Description -->
+   <p class="text-light mt-3">
+     {% blocktrans %}
+       Par la suite, j’ai intégré la <strong>licence MIASHS</strong> à l’Université Paris 1 Panthéon-Sorbonne. Cette formation m’a permis d’évoluer dans un environnement <strong>pluridisciplinaire</strong>, combinant <strong>mathématiques</strong>, <strong>informatique</strong>, <strong>économie</strong> et <strong>sciences humaines</strong>.<br>
+       Sur le plan informatique, j’ai étudié différents langages et technologies tels que <strong>Python</strong>, <strong>Java</strong>, <strong>PHP</strong>, <strong>HTML</strong>, <strong>CSS</strong>, tout en approfondissant mes connaissances à travers des cours de <strong>réseaux</strong>, <strong>architecture des ordinateurs</strong>, <strong>bases de données relationnelles</strong>, et même de <strong>droit du numérique</strong>.<br>
+       Ce programme exigeant m’a permis d’acquérir de solides <strong>compétences techniques</strong> tout en développant une <strong>rigueur analytique</strong> et une bonne compréhension des enjeux numériques dans leur globalité.
+     {% endblocktrans %}
+   </p>
+ </div>
+ 
+
+  
+      <!-- Étape 3 -->
+      <div x-data x-intersect.once="$el.classList.add('opacity-100','translate-x-0'); $el.classList.remove('opacity-0','-translate-x-10')"
+           class="ml-6 opacity-0 -translate-x-10 transition-all duration-700">
+        <time class="text-sm font-semibold text-secondary">{% trans "Sept. 2022 – Sept. 2024" %}</time>
+        <div class="flex flex-col-reverse items-center gap-4 md:flex-row md:items-center md:justify-between">
+          <h3 class="text-lg font-bold text-tertiary text-left">{% trans "Master 2 MIAGE <br>(Méthodes Informatiques Appliquées à la Gestion des Entreprises)" %}</h3>
+          <img class="w-40 max-h-20 flex-shrink-0" src="{% static 'svg/sorbonne.svg' %}" alt="Université Paris 1 Panthéon-Sorbonne">
+        </div>
+        <p class="text-light mt-2">
+          {% blocktrans %}
+            Naturellement, j’ai poursuivi mon cursus avec un <strong>Master MIAGE</strong>, toujours à Paris 1, qui allie <strong>informatique</strong>, <strong>gestion de projet</strong> et <strong>systèmes d'information d'entreprise</strong>.<br>
+            Ce master m’a permis d’approfondir mes compétences techniques tout en élargissant ma vision du rôle de l’informatique dans l’entreprise.<br>
+            J’y ai étudié des sujets avancés comme le <strong>cloud computing</strong> (<strong>AWS</strong>, <strong>GCP</strong>), la <strong>cybersécurité</strong>, l’<strong>architecture logicielle</strong>, la <strong>modélisation UML</strong>, les <strong>systèmes de gestion de bases de données avancés</strong>, ainsi que les bases du <strong>machine learning</strong> et de la <strong>blockchain</strong>.<br>
+            Le tout accompagné d’un travail continu sur le <strong>développement logiciel</strong> (en <strong>Python</strong>, <strong>JavaScript</strong>, etc.).
+        {% endblocktrans %}
+        </p>
+      </div>
+  
+    </div>

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-04 12:40+0200\n"
+"POT-Creation-Date: 2025-09-02 17:53+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,25 +22,191 @@ msgstr ""
 msgid "Tous droits réservés"
 msgstr "All rights reserved"
 
-#: theme/templates/navbar.html:43 theme/templates/navbar.html:63
-msgid "Accueil"
-msgstr "Home"
-
-#: theme/templates/navbar.html:44 theme/templates/navbar.html:69
+#: theme/templates/navbar.html:45 theme/templates/navbar.html:66
 msgid "À propos"
 msgstr "About me"
 
-#: theme/templates/navbar.html:45 theme/templates/navbar.html:75
-#: website/templates/home/snippets/skills_section.html:6
-#: website/templates/skills/base.html:15
+#: theme/templates/navbar.html:46 theme/templates/navbar.html:72
+#: website/templates/home/snippets/skills_section.html:11
+#: website/templates/skills/base.html:16
 msgid "Mes compétences"
 msgstr "My skills"
 
-#: theme/templates/navbar.html:46 theme/templates/navbar.html:81
+#: theme/templates/navbar.html:47 theme/templates/navbar.html:78
+msgid "Portfolio"
+msgstr "Portfolio"
+
+#: theme/templates/navbar.html:49 theme/templates/navbar.html:84
 msgid "Contact"
 msgstr "Contact"
 
-#: website/templates/about_me/snippets/academic_background.html:16
+#: website/templates/about_me/snippets/header.html:3
+#: website/templates/home/snippets/about_me.html:16
+msgid "À propos de moi"
+msgstr "About me"
+
+#: website/templates/about_me/snippets/header.html:4
+msgid "Mon parcours"
+msgstr "My background"
+
+#: website/templates/about_me/snippets/header.html:6
+msgid ""
+"\n"
+"        Mon parcours est le reflet de ma passion croissante pour "
+"l’informatique, \n"
+"        de mes premières lignes de code à un master en alternance. \n"
+"        J’ai construit étape par étape une solide base théorique, complétée "
+"par une expérience professionnelle concrète.\n"
+"      "
+msgstr ""
+"\n"
+"            My background reflects my growing passion for computer science — "
+"from my first lines of code to a work-study master's program. \n"
+"            I’ve built a strong theoretical foundation step by step, "
+"enriched with solid professional experience.\n"
+"        "
+
+#: website/templates/about_me/snippets/professional_exp.html:8
+msgid "Mon expérience professionnelle"
+msgstr "My professional experience"
+
+#: website/templates/about_me/snippets/professional_exp.html:11
+msgid ""
+"Une aventure enrichissante dans le monde du développement web et mobile."
+msgstr "A rewarding journey in the world of web and mobile development."
+#: website/templates/about_me/snippets/professional_exp.html:27
+msgid "Mai – Juil. 2022"
+msgstr "May – Jul. 2022"
+
+#: website/templates/about_me/snippets/professional_exp.html:33
+msgid "Développeuse front-end - Stage de fin de licence chez Tourdata"
+msgstr "Front-end Developer – Bachelor's internship at Tourdata"
+
+#: website/templates/about_me/snippets/professional_exp.html:39
+msgid ""
+"\n"
+"    J’ai intégré TourData pour mon <strong>stage de fin de licence</strong>, "
+"dans un contexte de <strong>full remote</strong>. \n"
+"    Ce premier contact avec le monde professionnel m’a permis de renforcer "
+"mes compétences en développement front-end tout en découvrant les bonnes "
+"pratiques de travail collaboratif en start-up.\n"
+"    "
+msgstr ""
+"\n"
+"I joined TourData for my <strong>bachelor's end-of-studies internship</strong> "
+"in a <strong>fully remote</strong> environment. \n"
+"This first professional experience allowed me to strengthen my front-end "
+"development skills while discovering best practices for collaborative work in a start-up.\n"
+"    "
+
+#: website/templates/about_me/snippets/professional_exp.html:49
+msgid "Refonte front-end d’un site vitrine avec Tailwind CSS"
+msgstr "Redesign of a showcase website using Tailwind CSS"
+
+#: website/templates/about_me/snippets/professional_exp.html:53
+msgid "Amélioration de l’accessibilité et de la responsivité"
+msgstr "Improvement of accessibility and responsiveness"
+
+#: website/templates/about_me/snippets/professional_exp.html:57
+msgid "Maintenance et évolution de projets existants"
+msgstr "Maintenance and enhancement of existing projects"
+
+#: website/templates/about_me/snippets/professional_exp.html:63
+msgid ""
+"\n"
+"    Cette première immersion m’a permis d’acquérir de <strong>solides bases "
+"professionnelles</strong>, \n"
+"    tout en confirmant mon envie de poursuivre dans le développement web et "
+"mobile.\n"
+"    "
+msgstr ""
+"\n"
+"This initial immersion allowed me to acquire <strong>solid professional foundations</strong>, \n"
+"while confirming my desire to continue in web and mobile development.\n"
+"    "
+
+#: website/templates/about_me/snippets/professional_exp.html:79
+msgid "Sept. 2022 – Sept. 2024"
+msgstr "Sept. 2022 – Sept. 2024"
+
+#: website/templates/about_me/snippets/professional_exp.html:85
+msgid "Développeuse fullstack - Alternance chez Tourdata"
+msgstr "Fullstack Developer – Work-study at Tourdata"
+
+#: website/templates/about_me/snippets/professional_exp.html:91
+msgid ""
+"\n"
+"J’ai eu la chance d’effectuer mes deux années de master en alternance au "
+"sein de la start-up <strong>TourData</strong>, spécialisée dans le "
+"développement web et mobile. \n"
+"Cette expérience en <strong>full remote</strong> m’a permis de contribuer à "
+"des projets variés tout en développant une forte autonomie et un sens aigu "
+"de l’initiative.\n"
+msgstr ""
+"\n"
+"I had the opportunity to complete both years of my master's program in a "
+"work-study format at the start-up <strong>TourData</strong>, specializing in "
+"web and mobile development. \n"
+"This fully remote experience allowed me to contribute to various projects "
+"while developing strong autonomy and a keen sense of initiative.\n"
+
+#: website/templates/about_me/snippets/professional_exp.html:101
+msgid "Refonte de sites vitrines avec Tailwind CSS"
+msgstr "Redesign of showcase websites using Tailwind CSS"
+
+#: website/templates/about_me/snippets/professional_exp.html:105
+msgid "Développement back-end avec Django et conception d’API REST (Django REST Framework)"
+msgstr "Back-end development with Django and REST API design (Django REST Framework)"
+
+#: website/templates/about_me/snippets/professional_exp.html:109
+msgid "Refactorisation complète d’une application mobile avec Flutter + intégration d’API Django"
+msgstr "Complete refactoring of a mobile app with Flutter + Django API integration"
+
+#: website/templates/about_me/snippets/professional_exp.html:113
+msgid "Déploiement sur AWS (EC2, RDS, S3) et publication mobile sur App Store & Google Play"
+msgstr "Deployment on AWS (EC2, RDS, S3) and mobile publication on App Store & Google Play"
+
+#: website/templates/about_me/snippets/professional_exp.html:117
+msgid "Intégration d’APIs externes (ChatGPT, Google Translate, text-to-speech…)"
+msgstr "Integration of external APIs (ChatGPT, Google Translate, text-to-speech…)"
+
+#: website/templates/about_me/snippets/professional_exp.html:121
+msgid "Suivi et gestion des erreurs avec Sentry pour améliorer la fiabilité des applications"
+msgstr "Error monitoring and management with Sentry to improve application reliability"
+
+#: website/templates/about_me/snippets/professional_exp.html:125
+msgid "Mise en place de tests unitaires et fonctionnels pour les modules critiques"
+msgstr "Implementation of unit and functional tests for critical modules"
+
+#: website/templates/about_me/snippets/professional_exp.html:129
+msgid "Gestion de projet : documentation technique et planification via Notion"
+msgstr "Project management: technical documentation and planning via Notion"
+
+#: website/templates/about_me/snippets/professional_exp.html:134
+msgid ""
+"\n"
+"Ce parcours m’a permis de <strong>maîtriser chaque étape</strong> du cycle "
+"de développement, de collaborer efficacement à distance, et de devenir une "
+"développeuse <strong>autonome</strong> et <strong>engagée</strong>.\n"
+msgstr ""
+"\n"
+"This journey allowed me to <strong>master every stage</strong> of the development "
+"cycle, collaborate efficiently in a remote setting, and become a "
+"<strong>self-reliant</strong> and <strong>committed</strong> developer.\n"
+
+#: website/templates/about_me/snippets/timestamp.html:10
+msgid "Juil. 2019"
+msgstr "Jul. 2019"
+
+#: website/templates/about_me/snippets/timestamp.html:13
+msgid ""
+"Baccalauréat Scientifique option ISN <br>(Informatique et sciences du "
+"numérique)"
+msgstr ""
+"Scientific Baccalaureate with ISN option <br>(Computer Science and Digital "
+"Sciences)"
+
+#: website/templates/about_me/snippets/timestamp.html:20
 msgid ""
 "\n"
 "                C’est en <strong>terminale</strong> que j’ai eu mon tout "
@@ -72,26 +238,38 @@ msgstr ""
 "                That’s when I knew I wanted to make it my profession.\n"
 "            "
 
-#: website/templates/about_me/snippets/academic_background.html:30
+#: website/templates/about_me/snippets/timestamp.html:36
+msgid "Sept. 2019 – Sept. 2022"
+msgstr "Sept. 2019 – Sept. 2022"
+
+#: website/templates/about_me/snippets/timestamp.html:42
+msgid ""
+"Licence MIASHS <br> (Mathématiques et Informatique Appliquées aux Sciences "
+"Humaines et Sociales)"
+msgstr ""
+"MIASHS Bachelor's Degree <br> (Mathematics and Computer Science Applied to "
+"Human and Social Sciences)"
+
+#: website/templates/about_me/snippets/timestamp.html:50
 msgid ""
 "\n"
-"            Par la suite, j’ai intégré la <strong>licence MIASHS</strong> à "
+"       Par la suite, j’ai intégré la <strong>licence MIASHS</strong> à "
 "l’Université Paris 1 Panthéon-Sorbonne. Cette formation m’a permis d’évoluer "
 "dans un environnement <strong>pluridisciplinaire</strong>, combinant "
 "<strong>mathématiques</strong>, <strong>informatique</strong>, "
 "<strong>économie</strong> et <strong>sciences humaines</strong>.<br>\n"
-"            Sur le plan informatique, j’ai étudié différents langages et "
+"       Sur le plan informatique, j’ai étudié différents langages et "
 "technologies tels que <strong>Python</strong>, <strong>Java</strong>, "
 "<strong>PHP</strong>, <strong>HTML</strong>, <strong>CSS</strong>, tout en "
 "approfondissant mes connaissances à travers des cours de <strong>réseaux</"
 "strong>, <strong>architecture des ordinateurs</strong>, <strong>bases de "
 "données relationnelles</strong>, et même de <strong>droit du numérique</"
 "strong>.<br>\n"
-"            Ce programme exigeant m’a permis d’acquérir de solides "
+"       Ce programme exigeant m’a permis d’acquérir de solides "
 "<strong>compétences techniques</strong> tout en développant une "
 "<strong>rigueur analytique</strong> et une bonne compréhension des enjeux "
 "numériques dans leur globalité.\n"
-"        "
+"     "
 msgstr ""
 "\n"
 "            I then enrolled in the <strong>MIASHS bachelor's degree</strong> "
@@ -111,7 +289,15 @@ msgstr ""
 "whole.\n"
 "        "
 
-#: website/templates/about_me/snippets/academic_background.html:56
+#: website/templates/about_me/snippets/timestamp.html:65
+msgid ""
+"Master 2 MIAGE <br>(Méthodes Informatiques Appliquées à la Gestion des "
+"Entreprises)"
+msgstr ""
+"MIAGE Master's Degree (Year 2) <br>(Computer Methods Applied to Business "
+"Management)"
+
+#: website/templates/about_me/snippets/timestamp.html:69
 msgid ""
 "\n"
 "            Naturellement, j’ai poursuivi mon cursus avec un <strong>Master "
@@ -150,164 +336,50 @@ msgstr ""
 "<strong>JavaScript</strong>, etc.).\n"
 "        "
 
-#: website/templates/about_me/snippets/header.html:3
-#: website/templates/home/snippets/about_me.html:11
-msgid "À propos de moi"
-msgstr "About me"
+#: website/templates/contact/snippets/page_contact.html:21
+msgid "Votre message a bien été envoyé."
+msgstr "Your message has been sent successfully."
 
-#: website/templates/about_me/snippets/header.html:4
-msgid "Mon parcours"
-msgstr "My background"
+#: website/templates/contact/snippets/page_contact.html:26
+msgid "Une erreur est survenue lors de l'envoie de l'email."
+msgstr "An error occurred while sending the email."
 
-#: website/templates/about_me/snippets/header.html:6
+#: website/templates/contact/snippets/page_contact.html:52
+msgid "Contactez moi"
+msgstr "Contact me"
+
+#: website/templates/contact/snippets/page_contact.html:54
 msgid ""
-"\n"
-"            Mon parcours est le reflet de ma passion croissante pour "
-"l’informatique, de mes premières lignes de code à un master en alternance. \n"
-"            J’ai construit étape par étape une solide base théorique, "
-"complétée par une expérience professionnelle concrète.\n"
-"        "
+"Si vous avez des questions, des opportunités de collaboration ou souhaitez "
+"discuter d'un projet, n'hésitez pas à me contacter ! Je me ferai un plaisir "
+"de vous répondre dans les plus brefs délais."
 msgstr ""
-"\n"
-"            My background reflects my growing passion for computer science — "
-"from my first lines of code to a work-study master's program. \n"
-"            I’ve built a strong theoretical foundation step by step, "
-"enriched with solid professional experience.\n"
-"        "
+"If you have any questions, collaboration opportunities, or would like to "
+"discuss a project, feel free to get in touch! I’ll be happy to get back to "
+"you as soon as possible."
 
-#: website/templates/about_me/snippets/professional_exp.html:8
-msgid "Mon expérience professionnelle"
-msgstr "My professional experience"
+#: website/templates/contact/snippets/page_contact.html:59
+#: website/templates/contact/snippets/page_contact.html:95
+msgid "Adresse e-mail"
+msgstr "Email address"
 
-#: website/templates/about_me/snippets/professional_exp.html:11
-msgid ""
-"Une aventure enrichissante dans le monde du développement web et mobile."
-msgstr "A rewarding journey in the world of web and mobile development."
+#: website/templates/contact/snippets/page_contact.html:77
+msgid "Prénom"
+msgstr "First name"
 
-#: website/templates/about_me/snippets/professional_exp.html:29
-msgid ""
-"J’ai eu la chance d’effectuer un <strong>stage de fin de licence</strong>, "
-"ainsi que mes <strong>deux années de master en alternance</strong> au sein "
-"de la start-up <strong>TourData</strong>, spécialisée dans le développement "
-"web et mobile. Toute cette expérience s’est déroulée en <strong>full remote</"
-"strong>, avec quelques déplacements ponctuels dans l’année, puisque "
-"l’entreprise est basée à Orléans."
-msgstr ""
-"I was fortunate to complete a <strong>bachelor's end-of-studies internship</"
-"strong> and both <strong>years of my master's program</strong> in a work-"
-"study format at the start-up <strong>TourData</strong>, which specializes in "
-"web and mobile development. The entire experience was conducted "
-"<strong>fully remotely</strong>, with occasional trips throughout the year, "
-"as the company is based in Orléans."
+#: website/templates/contact/snippets/page_contact.html:86
+msgid "Nom"
+msgstr "Last name"
 
-#: website/templates/about_me/snippets/professional_exp.html:32
-msgid ""
-"J’ai intégré l’équipe avec un bagage technique en <strong>HTML/CSS</strong> "
-"et <strong>Python</strong>. Mon tuteur m’a formée à <strong>Tailwind CSS</"
-"strong> et m’a confié la refonte d’un site vitrine, en améliorant à la fois "
-"son <strong>design</strong>, sa <strong>responsivité</strong> et son "
-"<strong>accessibilité</strong>."
-msgstr ""
-"I joined the team with technical skills in <strong>HTML/CSS</strong> and "
-"<strong>Python</strong>. My mentor trained me in <strong>Tailwind CSS</"
-"strong> and entrusted me with the redesign of a showcase website, improving "
-"its <strong>design</strong>, <strong>responsiveness</strong>, and "
-"<strong>accessibility</strong>."
+#: website/templates/contact/snippets/page_contact.html:104
+msgid "Message"
+msgstr "Message"
 
-#: website/templates/about_me/snippets/professional_exp.html:35
-msgid ""
-"En autodidacte, je me suis formée à <strong>Django</strong> grâce aux "
-"ouvrages <em>Django for Beginners</em> et <em>Django for APIs</em>. J’ai pu "
-"rapidement contribuer à la maintenance et à l’évolution de projets "
-"existants, puis en assumer la <strong>conduite complète</strong> : du "
-"recueil des besoins à la mise en production."
-msgstr ""
-"Self-taught, I learned <strong>Django</strong> through the books <em>Django "
-"for Beginners</em> and <em>Django for APIs</em>. I was quickly able to "
-"contribute to the maintenance and evolution of existing projects, and later "
-"take full ownership — from requirements gathering to deployment."
+#: website/templates/contact/snippets/page_contact.html:120
+msgid "Envoyez le message"
+msgstr "Send message"
 
-#: website/templates/about_me/snippets/professional_exp.html:38
-msgid ""
-"Cette expérience a été particulièrement <strong>formatrice</strong> et m’a "
-"permis de développer un <strong>profil polyvalent</strong>, avec un fort "
-"esprit d’initiative."
-msgstr ""
-"This experience was particularly <strong>educational</strong> and helped me "
-"develop a <strong>versatile profile</strong> with a strong sense of "
-"initiative."
-
-#: website/templates/about_me/snippets/professional_exp.html:47
-msgid "Poser les bonnes questions pour formaliser les besoins"
-msgstr "Asking the right questions to formalize requirements"
-
-#: website/templates/about_me/snippets/professional_exp.html:53
-msgid "Concevoir un site complet, du portail de connexion aux templates"
-msgstr "Designing a complete website, from login portals to templates"
-
-#: website/templates/about_me/snippets/professional_exp.html:59
-msgid "Intégrer des API tierces (paiement, cartographie, etc.)"
-msgstr "Integrating third-party APIs (payment, mapping, etc.)"
-
-#: website/templates/about_me/snippets/professional_exp.html:65
-msgid "Déployer sur le web, App Store et Google Play"
-msgstr "Deploying to the web, App Store, and Google Play"
-
-#: website/templates/about_me/snippets/professional_exp.html:71
-msgid "Développer des APIs et des applications mobiles"
-msgstr "Developing APIs and mobile applications"
-
-#: website/templates/about_me/snippets/professional_exp.html:77
-msgid "Gérer les tâches via Notion, rédiger des tests et documenter"
-msgstr "Managing tasks in Notion, writing tests, and documenting"
-
-#: website/templates/about_me/snippets/professional_exp.html:82
-msgid ""
-"Ce parcours m’a permis de <strong>maîtriser chaque étape</strong> du cycle "
-"de développement, de collaborer à distance avec efficacité, et de devenir "
-"une développeuse <strong>autonome</strong> et <strong>engagée</strong>."
-msgstr ""
-"This journey allowed me to <strong>master every stage</strong> of the "
-"development cycle, collaborate efficiently in a remote setting, and become a "
-"<strong>self-reliant</strong> and <strong>committed</strong> developer."
-
-#: website/templates/about_me/snippets/timestamp.html:9
-msgid "Juil. 2019"
-msgstr "Jul. 2019"
-
-#: website/templates/about_me/snippets/timestamp.html:12
-msgid ""
-"Baccalauréat Scientifique option ISN <br>(Informatique et sciences du "
-"numérique)"
-msgstr ""
-"Scientific Baccalaureate with ISN option <br>(Computer Science and Digital "
-"Sciences)"
-
-#: website/templates/about_me/snippets/timestamp.html:19
-msgid "Sept. 2019 – Sept. 2022"
-msgstr "Sept. 2019 – Sept. 2022"
-
-#: website/templates/about_me/snippets/timestamp.html:22
-msgid ""
-"Licence MIASHS <br> (Mathématiques et Informatique Appliquées aux Sciences "
-"Humaines et Sociales)</p>"
-msgstr ""
-"MIASHS Bachelor's Degree <br> (Mathematics and Computer Science Applied to "
-"Human and Social Sciences)</p>"
-
-#: website/templates/about_me/snippets/timestamp.html:30
-msgid "Sept. 2022 – Sept. 2024"
-msgstr "Sept. 2022 – Sept. 2024"
-
-#: website/templates/about_me/snippets/timestamp.html:33
-msgid ""
-"Master 2 MIAGE <br>(Méthodes Informatiques Appliquées à la Gestion des "
-"Entreprises)"
-msgstr ""
-"MIAGE Master's Degree (Year 2) <br>(Computer Methods Applied to Business "
-"Management)"
-
-#: website/templates/home/snippets/about_me.html:19
+#: website/templates/home/snippets/about_me.html:24
 msgid ""
 "\n"
 "              Au cours de mes deux années d’alternance au sein d’une start-"
@@ -341,165 +413,149 @@ msgstr ""
 "and high-quality user experiences.\n"
 "              "
 
-#: website/templates/home/snippets/about_me.html:31
+#: website/templates/home/snippets/about_me.html:36
 msgid "Téléchargez mon CV"
 msgstr "Download my CV"
 
-#: website/templates/home/snippets/hero_section.html:10
-msgid "Votre navigateur ne supporte pas la vidéo."
-msgstr "Your browser does not support the video."
-
-#: website/templates/home/snippets/hero_section.html:20
+#: website/templates/home/snippets/hero_section.html:49
 msgid "DÉVELOPPEUSE FULL-STACK "
 msgstr "FULL-STACK DEVELOPER"
 
-#: website/templates/home/snippets/hero_section.html:33
+#: website/templates/home/snippets/portfolio.html:12
+#: website/templates/portfolio/base.html:16
+msgid "Mon Portfolio"
+msgstr "My Portfolio"
+
+#: website/templates/home/snippets/portfolio.html:34
 msgid ""
-"\n"
-"                Salut, je m'appelle Sara ! <br> Je suis développeuse full-"
-"stack passionnée par les technologies web. <br>\n"
-"                Je viens d'obtenir un Master en MIAGE à l'université de la "
-"Sorbonne. <br>\n"
-"                Je suis spécialisé dans Django et les outils front-end "
-"modernes, et je recherche actuellement un poste stimulant qui me permettra "
-"de consolider mes compétences et de relever de nouveaux défis techniques.\n"
-"              "
+"Maintenance évolutive du site interne de l'entreprise <strong>YCSOS</"
+"strong>. Le site permet de saisir des informations spécifiques lors "
+"d'interventions chez des particuliers pour effectuer des inspections et "
+"contrôles CEE.  \n"
+"            Les informations saisies génèrent automatiquement des documents "
+"Word résumant les données et le site facilite le suivi des rendez-vous des "
+"inspecteurs ainsi que de nombreuses tâches internes."
 msgstr ""
-"\n"
-"Hi, I'm Sara! <br> I'm a full-stack developer passionate about web "
-"technologies. <br>\n"
-"I recently graduated with a Master's in MIAGE from the Sorbonne University. "
-"<br>\n"
-"My main focus is Django and modern front-end tools, and I'm currently "
-"looking for an exciting opportunity to strengthen my skills and take on new "
-"technical challenges.\n"
-"              "
+"Ongoing maintenance of the internal website of <strong>YCSOS</strong>. The site "
+"allows entering specific information during home inspections for CEE checks.  \n"
+"            The entered information automatically generates Word documents summarizing "
+"the data, and the site streamlines scheduling of inspectors’ appointments as well as many internal tasks."
 
-#: website/templates/home/snippets/page_contact.html:17
-msgid "Votre message a bien été envoyé."
-msgstr "Your message has been sent successfully."
-
-#: website/templates/home/snippets/page_contact.html:22
-msgid "Une erreur est survenue lors de l'envoie de l'email."
-msgstr "An error occurred while sending the email."
-
-#: website/templates/home/snippets/page_contact.html:46
-msgid "Contactez moi"
-msgstr "Contact me"
-
-#: website/templates/home/snippets/page_contact.html:48
+#: website/templates/home/snippets/portfolio.html:72
 msgid ""
-"Si vous avez des questions, des opportunités de collaboration ou souhaitez "
-"discuter d'un projet, n'hésitez pas à me contacter ! Je me ferai un plaisir "
-"de vous répondre dans les plus brefs délais."
+"Refactorisation de plusieurs applications du groupe <strong>GuidelingOU</"
+"strong>.  \n"
+"        Chaque application représente un lieu ou un musée (Louvre, "
+"Montmartre, Rijksmuseum…) et permet d’acheter des visites guidées en suivant "
+"des images et un texte détaillant chaque œuvre ou point intéressant sur le "
+"chemin.  \n"
+"        J’ai pu refaire entièrement ces applications, qui possèdent un code "
+"commun et font des appels API différents selon les lieux, puis les déployer "
+"sur les différentes plateformes."
 msgstr ""
-"If you have any questions, collaboration opportunities, or would like to "
-"discuss a project, feel free to get in touch! I’ll be happy to get back to "
-"you as soon as possible."
+"Refactoring several applications of the <strong>GuidelingOU</strong> group.  \n"
+"        Each app represents a location or museum (Louvre, Montmartre, Rijksmuseum…) "
+"and allows users to purchase guided tours while following images and text detailing each artwork or point of interest along the way.  \n"
+"        I completely rebuilt these apps, which share common code but make different API calls depending on the location, and then deployed them across the various platforms."
 
-#: website/templates/home/snippets/page_contact.html:53
-#: website/templates/home/snippets/page_contact.html:86
-msgid "Adresse e-mail"
-msgstr "Email address"
 
-#: website/templates/home/snippets/page_contact.html:68
-msgid "Prénom"
-msgstr "First name"
+#: website/templates/home/snippets/skills_section.html:35
+msgid "Backend"
+msgstr "Backend"
 
-#: website/templates/home/snippets/page_contact.html:77
-msgid "Nom"
-msgstr "Last name"
-
-#: website/templates/home/snippets/page_contact.html:95
-msgid "Message"
-msgstr "Message"
-
-#: website/templates/home/snippets/page_contact.html:111
-msgid "Envoyez le message"
-msgstr "Send message"
-
-#: website/templates/home/snippets/skills_section.html:57
+#: website/templates/home/snippets/skills_section.html:37
 msgid ""
-"J'ai utilisé Django pour développer des sites web et des applications web "
-"sécurisés et performants. Ses fonctionnalités intégrées m'ont permis de "
-"créer rapidement des projets."
+"Développement côté serveur avec <strong>Django</strong>, création "
+"d’<strong>API REST</strong> et gestion de bases de données relationnelles et "
+"NoSQL (<strong>SQLite, PostgreSQL, MongoDB</strong>). Surveillance et "
+"corrections en production avec <strong>Sentry</strong> pour garantir "
+"stabilité et performance."
 msgstr ""
-"I used Django to develop secure and high-performance websites and web "
-"applications. Its built-in features allowed me to quickly build and deploy "
-"projects."
+"Server-side development with <strong>Django</strong>, creating <strong>REST "
+"APIs</strong> and managing relational and NoSQL databases (<strong>SQLite, "
+"PostgreSQL, MongoDB</strong>). Monitoring and fixing issues in production "
+"with <strong>Sentry</strong> to ensure stability and performance."
 
-#: website/templates/home/snippets/skills_section.html:100
+#: website/templates/home/snippets/skills_section.html:49
+msgid "Frontend"
+msgstr "Frontend"
+
+#: website/templates/home/snippets/skills_section.html:51
 msgid ""
-"J'ai utilisé Angular pour développer des applications web dynamiques avec "
-"une interface utilisateur fluide et interactive."
+"Développement d’interfaces modernes et réactives avec <strong>Angular</"
+"strong>, <strong>HTML5</strong>, <strong>CSS3</strong> et <strong>Tailwind "
+"CSS</strong>. Ajout d’interactivité légère grâce à <strong>Alpine.js</"
+"strong> et <strong>HTMX</strong> pour des expériences utilisateur fluides."
 msgstr ""
-"I used Angular to build dynamic web applications with smooth and interactive "
-"user interfaces."
+"Developing modern, responsive interfaces with <strong>Angular</strong>, "
+"<strong>HTML5</strong>, <strong>CSS3</strong> and <strong>Tailwind CSS</"
+"strong>. Adding light interactivity using <strong>Alpine.js</strong> and "
+"<strong>HTMX</strong> for smooth user experiences."
 
-#: website/templates/home/snippets/skills_section.html:152
+#: website/templates/home/snippets/skills_section.html:64
+msgid "Mobile"
+msgstr "Mobile"
+
+#: website/templates/home/snippets/skills_section.html:66
 msgid ""
-"J'ai utilisé HTML, CSS, Tailwind et Boostrap pour créer des sites web "
-"réactifs et esthétiques, garantissant une interface utilisateur simple et "
-"moderne."
+"Création d’applications multiplateformes avec <strong>Flutter</strong> et "
+"<strong>Ionic</strong>, optimisées pour performance et expérience "
+"utilisateur sur toutes plateformes."
 msgstr ""
-"I used HTML, CSS, Tailwind, and Bootstrap to create responsive and visually "
-"appealing websites, ensuring a clean and modern user interface."
+"Creating cross-platform applications with <strong>Flutter</strong> and "
+"<strong>Ionic</strong>, optimized for performance and user experience across "
+"all platforms."
 
-#: website/templates/home/snippets/skills_section.html:195
+#: website/templates/home/snippets/skills_section.html:77
+msgid "Déploiement & Cloud"
+msgstr "Deployment & Cloud"
+
+#: website/templates/home/snippets/skills_section.html:79
 msgid ""
-"J'ai utilisé Alpine et HTMX pour ajouter des fonctionnalités interactives et "
-"dynamiques aux sites web sans ajouter de code."
+"Déploiement sur <strong>AWS</strong>, gestion des infrastructures cloud et "
+"publication d’applications mobiles sur <strong>App Store</strong> et "
+"<strong>Google Play</strong> avec suivi complet des étapes techniques."
 msgstr ""
-"I used Alpine and HTMX to add interactive and dynamic features to websites "
-"without writing heavy JavaScript code."
+"Deployment on <strong>AWS</strong>, managing cloud infrastructure, and "
+"publishing mobile apps on <strong>App Store</strong> and <strong>Google "
+"Play</strong> with full technical workflow tracking."
 
-#: website/templates/home/snippets/skills_section.html:213
-msgid "Applications mobiles"
-msgstr "Mobile apps"
+#: website/templates/home/snippets/skills_section.html:90
+msgid "Versioning"
+msgstr "Versioning"
 
-#: website/templates/home/snippets/skills_section.html:242
+#: website/templates/home/snippets/skills_section.html:92
 msgid ""
-"J'ai utilisé Flutterflow ou Ionic dans le développement mobile pour créer "
-"des applications intuitives, accessibles et optimisées pour iOS et Android."
+"Utilisation quotidienne de <strong>Git</strong> pour le versioning, "
+"collaboration et suivi des projets avec bonnes pratiques de branches et "
+"commits clairs."
 msgstr ""
-"I used Flutterflow and Ionic for mobile development to create intuitive, "
-"accessible, and optimized applications for both iOS and Android."
+"Daily use of <strong>Git</strong> for version control, collaboration, and "
+"project tracking with best practices for clear branching and commits."
 
-#: website/templates/home/snippets/skills_section.html:269
-msgid "Base de données"
-msgstr "Database"
+#: website/templates/home/snippets/skills_section.html:103
+msgid "Outils & Autres"
+msgstr "Tools & Others"
 
-#: website/templates/home/snippets/skills_section.html:299
+#: website/templates/home/snippets/skills_section.html:105
 msgid ""
-"J'ai utilisé des bases de données SQL telles que MySQL et PostgreSQL, ainsi "
-"que des bases de données NoSQL telles que MongoDB pour stocker et gérer "
-"efficacement les données dans mes projets web."
+"Organisation et gestion de projet avec <strong>Notion</strong>. Intégration "
+"d’<strong>API externes</strong>, notamment <strong>GPT</strong>, pour "
+"enrichir les fonctionnalités des applications."
 msgstr ""
-"I used SQL databases such as MySQL and PostgreSQL, as well as NoSQL "
-"databases like MongoDB, to efficiently store and manage data in my web "
-"projects."
+"Project organization and management with <strong>Notion</strong>. "
+"Integration of <strong>external APIs</strong>, including <strong>GPT</"
+"strong>, to enhance application features."
 
-#: website/templates/home/snippets/skills_section.html:344
-msgid ""
-"J'ai utilisé AWS et GCP pour déployer des applications web sur le cloud, "
-"garantissant une gestion efficace des ressources et une évolutivité optimale."
-msgstr ""
-"I used AWS and GCP to deploy web applications to the cloud, ensuring "
-"efficient resource management and optimal scalability."
+#: website/templates/portfolio/base.html:17
+msgid "Les différents projets sur lesquels j'ai pu intervenir."
+msgstr "The various projects I have been involved in."
 
-#: website/templates/home/snippets/skills_section.html:384
-msgid ""
-"J'ai utilisé Github pour gérer et versionner mes projets, facilitant ainsi "
-"la collaboration et le suivi des modifications."
-msgstr ""
-"I used GitHub to manage and version my projects, making collaboration and "
-"change tracking easier."
-
-#: website/templates/skills/base.html:16
+#: website/templates/skills/base.html:17
 msgid "Mes technologies de prédilection affinées au fil de projets concrets."
 msgstr "My preferred technologies, refined through real-world projects."
 
-#: website/templates/skills/base.html:22
+#: website/templates/skills/base.html:25
 msgid ""
 "\n"
 "                    Django est ma technologie principale. \n"
@@ -523,7 +579,7 @@ msgstr ""
 "its robustness in production.\n"
 "                  "
 
-#: website/templates/skills/base.html:39
+#: website/templates/skills/base.html:44
 msgid ""
 "\n"
 "                        J’ai développé plusieurs projets front-end avec "
@@ -540,7 +596,7 @@ msgstr ""
 "reactive forms, and communication with REST APIs.\n"
 "                      "
 
-#: website/templates/skills/base.html:51
+#: website/templates/skills/base.html:58
 msgid ""
 "\n"
 "                        Avec Flutter et FlutterFlow, j’ai développé "
@@ -564,7 +620,7 @@ msgstr ""
 "logic.\n"
 "                      "
 
-#: website/templates/skills/base.html:62
+#: website/templates/skills/base.html:71
 msgid ""
 "\n"
 "                        GitHub est mon outil principal de gestion de "
@@ -581,7 +637,7 @@ msgstr ""
 "merge, etc.), and GitHub Copilot.\n"
 "                      "
 
-#: website/templates/skills/base.html:73
+#: website/templates/skills/base.html:84
 msgid ""
 "\n"
 "                          J’ai utilisé Ionic pour développer des "
@@ -596,7 +652,7 @@ msgstr ""
 "with a smooth mobile experience.\n"
 "                        "
 
-#: website/templates/skills/base.html:87
+#: website/templates/skills/base.html:100
 msgid ""
 "\n"
 "                        J’ai utilisé HTMX de manière professionnelle pour "
@@ -613,7 +669,7 @@ msgstr ""
 "rich behaviors while staying close to Django’s MVC model.\n"
 "                      "
 
-#: website/templates/skills/base.html:104
+#: website/templates/skills/base.html:119
 msgid ""
 "\n"
 "                        J’ai utilisé AWS principalement pour le déploiement "
@@ -630,7 +686,7 @@ msgstr ""
 "stack for a web app.\n"
 "                      "
 
-#: website/templates/skills/base.html:115
+#: website/templates/skills/base.html:132
 msgid ""
 "\n"
 "                          J’ai utilisé Sentry pour le suivi des erreurs en "
@@ -645,7 +701,7 @@ msgstr ""
 "improving application reliability.\n"
 "                        "
 
-#: website/templates/skills/base.html:130
+#: website/templates/skills/base.html:149
 msgid ""
 "\n"
 "                        Alpine.js me permet d’ajouter de petites "
@@ -664,7 +720,7 @@ msgstr ""
 "Tailwind CSS.\n"
 "                      "
 
-#: website/templates/skills/base.html:142
+#: website/templates/skills/base.html:163
 msgid ""
 "\n"
 "                        Sur Google Cloud Platform, j’ai travaillé avec "
@@ -678,7 +734,7 @@ msgstr ""
 "to enhance the user experience.\n"
 "                      "
 
-#: website/templates/skills/base.html:155
+#: website/templates/skills/base.html:178
 msgid ""
 "\n"
 "                          J’ai déjà déployé des applications mobiles de A à "
@@ -695,7 +751,7 @@ msgstr ""
 "descriptions, versions), and tracking updates.\n"
 "                        "
 
-#: website/templates/skills/base.html:170
+#: website/templates/skills/base.html:195
 msgid ""
 "\n"
 "                        J’utilise HTML et CSS depuis plus de 6 ans, que ce "
@@ -714,7 +770,7 @@ msgstr ""
 "daily.\n"
 "                      "
 
-#: website/templates/skills/base.html:182
+#: website/templates/skills/base.html:209
 msgid ""
 "                     \n"
 "                        Dans le cadres de différents projets menés lors de "
@@ -736,7 +792,7 @@ msgstr ""
 "responsive, and efficient interfaces with excellent mobile compatibility.\n"
 "                      "
 
-#: website/templates/skills/base.html:195
+#: website/templates/skills/base.html:224
 msgid ""
 "\n"
 "                        J’ai un bon niveau en bases de données, aussi bien "
@@ -750,7 +806,7 @@ msgstr ""
 "them via ORMs or APIs.\n"
 "                      "
 
-#: website/templates/skills/base.html:207
+#: website/templates/skills/base.html:238
 msgid ""
 "\n"
 "                          J’utilise Notion et Trello pour la gestion de "
@@ -764,3 +820,182 @@ msgstr ""
 "task organization, roadmap tracking, and documentation. These tools allow me "
 "to collaborate effectively, whether in a team or independently.\n"
 "                        "
+
+#, fuzzy, python-brace-format
+#~| msgid "Envoyez le message"
+#~ msgid "Invalid value: {message}"
+#~ msgstr "Send message"
+
+#, fuzzy
+#~| msgid "Message"
+#~ msgid "Usage:"
+#~ msgstr "Message"
+
+#, fuzzy, python-brace-format
+#~| msgid "Envoyez le message"
+#~ msgid "Error: {e.message}"
+#~ msgstr "Send message"
+
+#, fuzzy
+#~| msgid "Message"
+#~ msgid "Messages"
+#~ msgstr "Message"
+
+#, fuzzy
+#~| msgid "Nom"
+#~ msgid "No"
+#~ msgstr "Last name"
+
+#, fuzzy
+#~| msgid "Contact"
+#~ msgid "oct"
+#~ msgstr "Contact"
+
+#~ msgid "Accueil"
+#~ msgstr "Home"
+
+#~ msgid ""
+#~ "J’ai intégré l’équipe avec un bagage technique en <strong>HTML/CSS</"
+#~ "strong> et <strong>Python</strong>. Mon tuteur m’a formée à "
+#~ "<strong>Tailwind CSS</strong> et m’a confié la refonte d’un site vitrine, "
+#~ "en améliorant à la fois son <strong>design</strong>, sa "
+#~ "<strong>responsivité</strong> et son <strong>accessibilité</strong>."
+#~ msgstr ""
+#~ "I joined the team with technical skills in <strong>HTML/CSS</strong> and "
+#~ "<strong>Python</strong>. My mentor trained me in <strong>Tailwind CSS</"
+#~ "strong> and entrusted me with the redesign of a showcase website, "
+#~ "improving its <strong>design</strong>, <strong>responsiveness</strong>, "
+#~ "and <strong>accessibility</strong>."
+
+#~ msgid ""
+#~ "En autodidacte, je me suis formée à <strong>Django</strong> grâce aux "
+#~ "ouvrages <em>Django for Beginners</em> et <em>Django for APIs</em>. J’ai "
+#~ "pu rapidement contribuer à la maintenance et à l’évolution de projets "
+#~ "existants, puis en assumer la <strong>conduite complète</strong> : du "
+#~ "recueil des besoins à la mise en production."
+#~ msgstr ""
+#~ "Self-taught, I learned <strong>Django</strong> through the books "
+#~ "<em>Django for Beginners</em> and <em>Django for APIs</em>. I was quickly "
+#~ "able to contribute to the maintenance and evolution of existing projects, "
+#~ "and later take full ownership — from requirements gathering to deployment."
+
+#~ msgid ""
+#~ "Cette expérience a été particulièrement <strong>formatrice</strong> et "
+#~ "m’a permis de développer un <strong>profil polyvalent</strong>, avec un "
+#~ "fort esprit d’initiative."
+#~ msgstr ""
+#~ "This experience was particularly <strong>educational</strong> and helped "
+#~ "me develop a <strong>versatile profile</strong> with a strong sense of "
+#~ "initiative."
+
+#~ msgid "Poser les bonnes questions pour formaliser les besoins"
+#~ msgstr "Asking the right questions to formalize requirements"
+
+#~ msgid "Concevoir un site complet, du portail de connexion aux templates"
+#~ msgstr "Designing a complete website, from login portals to templates"
+
+#~ msgid "Intégrer des API tierces (paiement, cartographie, etc.)"
+#~ msgstr "Integrating third-party APIs (payment, mapping, etc.)"
+
+#~ msgid "Déployer sur le web, App Store et Google Play"
+#~ msgstr "Deploying to the web, App Store, and Google Play"
+
+#~ msgid "Développer des APIs et des applications mobiles"
+#~ msgstr "Developing APIs and mobile applications"
+
+#~ msgid "Gérer les tâches via Notion, rédiger des tests et documenter"
+#~ msgstr "Managing tasks in Notion, writing tests, and documenting"
+
+#~ msgid "Votre navigateur ne supporte pas la vidéo."
+#~ msgstr "Your browser does not support the video."
+
+#~ msgid ""
+#~ "\n"
+#~ "                Salut, je m'appelle Sara ! <br> Je suis développeuse full-"
+#~ "stack passionnée par les technologies web. <br>\n"
+#~ "                Je viens d'obtenir un Master en MIAGE à l'université de "
+#~ "la Sorbonne. <br>\n"
+#~ "                Je suis spécialisé dans Django et les outils front-end "
+#~ "modernes, et je recherche actuellement un poste stimulant qui me "
+#~ "permettra de consolider mes compétences et de relever de nouveaux défis "
+#~ "techniques.\n"
+#~ "              "
+#~ msgstr ""
+#~ "\n"
+#~ "Hi, I'm Sara! <br> I'm a full-stack developer passionate about web "
+#~ "technologies. <br>\n"
+#~ "I recently graduated with a Master's in MIAGE from the Sorbonne "
+#~ "University. <br>\n"
+#~ "My main focus is Django and modern front-end tools, and I'm currently "
+#~ "looking for an exciting opportunity to strengthen my skills and take on "
+#~ "new technical challenges.\n"
+#~ "              "
+
+#~ msgid ""
+#~ "J'ai utilisé Django pour développer des sites web et des applications web "
+#~ "sécurisés et performants. Ses fonctionnalités intégrées m'ont permis de "
+#~ "créer rapidement des projets."
+#~ msgstr ""
+#~ "I used Django to develop secure and high-performance websites and web "
+#~ "applications. Its built-in features allowed me to quickly build and "
+#~ "deploy projects."
+
+#~ msgid ""
+#~ "J'ai utilisé Angular pour développer des applications web dynamiques avec "
+#~ "une interface utilisateur fluide et interactive."
+#~ msgstr ""
+#~ "I used Angular to build dynamic web applications with smooth and "
+#~ "interactive user interfaces."
+
+#~ msgid ""
+#~ "J'ai utilisé HTML, CSS, Tailwind et Boostrap pour créer des sites web "
+#~ "réactifs et esthétiques, garantissant une interface utilisateur simple et "
+#~ "moderne."
+#~ msgstr ""
+#~ "I used HTML, CSS, Tailwind, and Bootstrap to create responsive and "
+#~ "visually appealing websites, ensuring a clean and modern user interface."
+
+#~ msgid ""
+#~ "J'ai utilisé Alpine et HTMX pour ajouter des fonctionnalités interactives "
+#~ "et dynamiques aux sites web sans ajouter de code."
+#~ msgstr ""
+#~ "I used Alpine and HTMX to add interactive and dynamic features to "
+#~ "websites without writing heavy JavaScript code."
+
+#~ msgid "Applications mobiles"
+#~ msgstr "Mobile apps"
+
+#~ msgid ""
+#~ "J'ai utilisé Flutterflow ou Ionic dans le développement mobile pour créer "
+#~ "des applications intuitives, accessibles et optimisées pour iOS et "
+#~ "Android."
+#~ msgstr ""
+#~ "I used Flutterflow and Ionic for mobile development to create intuitive, "
+#~ "accessible, and optimized applications for both iOS and Android."
+
+#~ msgid "Base de données"
+#~ msgstr "Database"
+
+#~ msgid ""
+#~ "J'ai utilisé des bases de données SQL telles que MySQL et PostgreSQL, "
+#~ "ainsi que des bases de données NoSQL telles que MongoDB pour stocker et "
+#~ "gérer efficacement les données dans mes projets web."
+#~ msgstr ""
+#~ "I used SQL databases such as MySQL and PostgreSQL, as well as NoSQL "
+#~ "databases like MongoDB, to efficiently store and manage data in my web "
+#~ "projects."
+
+#~ msgid ""
+#~ "J'ai utilisé AWS et GCP pour déployer des applications web sur le cloud, "
+#~ "garantissant une gestion efficace des ressources et une évolutivité "
+#~ "optimale."
+#~ msgstr ""
+#~ "I used AWS and GCP to deploy web applications to the cloud, ensuring "
+#~ "efficient resource management and optimal scalability."
+
+#~ msgid ""
+#~ "J'ai utilisé Github pour gérer et versionner mes projets, facilitant "
+#~ "ainsi la collaboration et le suivi des modifications."
+#~ msgstr ""
+#~ "I used GitHub to manage and version my projects, making collaboration and "
+#~ "change tracking easier."

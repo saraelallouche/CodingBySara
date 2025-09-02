@@ -5,13 +5,15 @@
 ">
  
   {% if messages %}
+  <div >
+
   {% for message in messages %}
-    <div x-data="{ show: true }"
+        <div x-data="{ show: true }"
     x-init="setTimeout(() => show = false, 5000)"
     x-show="show"
     x-transition
-    class="relative isolate flex justify-center items-center gap-x-3 overflow-hidden bg-primary px-6 py-2.5 sm:px-3.5">
-      <p class="text-sm text-dark text-center flex items-center gap-x-2">
+    class="relative isolate flex justify-center items-center gap-x-3 overflow-hidden bg-tertiary px-6 py-2.5 sm:px-3.5">
+      <p class="text-sm text-light text-center flex items-center gap-x-2">
         {% if message.tags == 'success' %}
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
             <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
@@ -26,6 +28,8 @@
       </p>
     </div>
   {% endfor %}
+</div>
+
 {% endif %}
 
 
@@ -46,24 +50,27 @@
             </div>
           </div>
           <h2 class="text-pretty text-4xl font-semibold tracking-tight text-light sm:text-5xl">{% trans "Contactez moi" %}</h2>
-          <p class="mt-6 text-lg/8 text-primary">
+          <p class="mt-6 text-lg/8 text-light">
             {% trans "Si vous avez des questions, des opportunités de collaboration ou souhaitez discuter d'un projet, n'hésitez pas à me contacter ! Je me ferai un plaisir de vous répondre dans les plus brefs délais." %}
           </p>
-          <dl class="mt-10 space-y-4 text-base/7 text-primary">
+          <dl class="mt-10 space-y-4 text-base/7 text-tertiary hover:text-secondary">
             <div class="flex gap-x-4">
               <dt class="flex-none">
                 <span class="sr-only">{% trans "Adresse e-mail" %}</span>
-                <svg class="h-7 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                <svg class="h-7 w-6 " fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
                 </svg>
               </dt>
-              <dd><a class="hover:text-light" href="mailto:saraelallouche@hotmail.fr">saraelallouche@hotmail.fr</a></dd>
+              <dd><a class="" href="mailto:saraelallouche@hotmail.fr">saraelallouche@hotmail.fr</a></dd>
             </div>
           </dl>
         </div>
       </div>
       <form action="{% url 'send_mail_page' %}" method="POST" class="px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-48">
         {% csrf_token %}
+
+        <input type="hidden" name="next" value="{{ page }}">
+
         <div class="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
           <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
             <div>
@@ -71,7 +78,7 @@
               <div class="mt-2.5">
                 <input type="text" name="first_name" id="first_name" autocomplete="given-name" value="{{ form.data.first_name|default:'' }}" class="block w-full rounded-md bg-light/5 px-3.5 py-2 text-base text-light  placeholder:text-primary focus:border-secondary focus:border-2 focus:ring-0">
                 {% if form.first_name.errors %}
-                  <p class="mt-1 text-sm text-secondary">{{ form.first_name.errors.0 }}</p>
+                  <p class="mt-1 text-sm text-tertiary">{{ form.first_name.errors.0 }}</p>
                 {% endif %}
               </div>
             </div>
@@ -80,7 +87,7 @@
               <div class="mt-2.5">
                 <input type="text" name="last_name" id="last_name" autocomplete="family-name" value="{{ form.data.last_name|default:'' }}"class="block w-full rounded-md bg-light/5 px-3.5 py-2 text-base text-light  placeholder:text-primary focus:border-secondary focus:border-2 focus:ring-0">
                 {% if form.last_name.errors %}
-                  <p class="mt-1 text-sm text-secondary">{{ form.last_name.errors.0 }}</p>
+                  <p class="mt-1 text-sm text-tertiary">{{ form.last_name.errors.0 }}</p>
                 {% endif %}
               </div>
             </div>
@@ -89,7 +96,7 @@
               <div class="mt-2.5">
                 <input type="email" name="email" id="email" autocomplete="email" value="{{ form.data.email|default:'' }}"class="block w-full rounded-md bg-light/5 px-3.5 py-2 text-base text-light placeholder:text-primary focus:border-secondary focus:border-2 focus:ring-0">
                 {% if form.email.errors %}
-                  <p class="mt-1 text-sm text-secondary">{{ form.email.errors.0 }}</p>
+                  <p class="mt-1 text-sm text-tertiary">{{ form.email.errors.0 }}</p>
                 {% endif %}
               </div>
             </div>
@@ -104,13 +111,13 @@
                 focus:border-secondary focus:border-2 focus:ring-0"
                 />{{ form.data.message|default:'' }}</textarea>
                 {% if form.message.errors %}
-                  <p class="mt-1 text-sm text-secondary">{{ form.message.errors.0 }}</p>
+                  <p class="mt-1 text-sm text-tertiary">{{ form.message.errors.0 }}</p>
                 {% endif %}
               </div>
             </div>
           </div>
           <div class="mt-8 flex justify-end">
-            <button type="submit" class="rounded-full bg-gradient-to-r from-light to-primary px-3.5 py-2.5 text-center text-sm font-semibold text-dark shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary">{% trans "Envoyez le message" %}</button>
+            <button type="submit" class="rounded-full bg-gradient-to-r from-tertiary to-primary px-3.5 py-2.5 text-center text-sm font-semibold text-light shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary">{% trans "Envoyez le message" %}</button>
           </div>
         </div>
       </form>
