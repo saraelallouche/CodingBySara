@@ -6,7 +6,7 @@
 
 ## ✨ Aperçu
 
-<img src="static/images/screenshot_home.png" alt="Aperçu du site Coding by Sara" width="100%">
+<img src="static/images/screen_home.png" alt="Aperçu du site Coding by Sara" width="100%">
 
 ---
 
